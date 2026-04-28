@@ -28,9 +28,34 @@ from router.engine import ALL_POLICIES, Objective, count_input_tokens, route
 
 # ─── caching ─────────────────────────────────────────────────────────────
 
-@st.cache_resource(show_spinner="Loading classifier (one-time, ~5s)…")
+DATASET_PATH = ROOT / "llm_router_poc_spec_and_dataset" / "prompt_classifier_dataset_1000.jsonl"
+ARTIFACTS_DIR = ROOT / "classifier" / "artifacts"
+
+
+def _bootstrap_train_if_needed() -> None:
+    """First-deploy bootstrap: train the classifier if no artifacts exist.
+
+    This is what makes the app self-contained on Streamlit Cloud — the trained
+    artifacts are gitignored, so the cloud container has no models on cold
+    start. We train once (~30 s on CPU) and then serve normally.
+    """
+    if (ARTIFACTS_DIR / "heads").exists():
+        return
+    from classifier.train import train_classifier
+
+    with st.status("First-deploy bootstrap: training classifier (~30 s on CPU)…", expanded=True) as status:
+        train_classifier(
+            data_path=DATASET_PATH,
+            artifacts_dir=ARTIFACTS_DIR,
+            log=lambda msg: status.write(msg),
+        )
+        status.update(label="Classifier trained ✓", state="complete", expanded=False)
+
+
+@st.cache_resource(show_spinner="Loading classifier…")
 def get_classifier():
-    return Classifier(artifacts_dir=ROOT / "classifier" / "artifacts")
+    _bootstrap_train_if_needed()
+    return Classifier(artifacts_dir=ARTIFACTS_DIR)
 
 
 @st.cache_resource
