@@ -1,238 +1,297 @@
-# LLM Inference Router Simulator
+# LLM Inference Router POC
 
-> Cost / latency / quality-aware routing across mocked LLM providers, with a reproducible benchmark harness.
+A prompt-aware LLM router. A trained classifier predicts what the prompt *needs*; a deterministic rule-based router consults a static model-capability table; the cheapest/fastest model that meets the quality bar is selected.
 
-**Status:** design draft. Iterate freely — every section below is up for debate.
-
----
-
-## 1. Why this exists
-
-Build a portfolio-grade routing service that demonstrates real infra thinking:
-
-- prompt-aware routing (not hard-coded model picks)
-- explicit cost / latency / quality tradeoffs under a user-chosen objective
-- caching, fallback, circuit-breaker
-- a **benchmark** that *proves* the router beats baselines and approaches the oracle
-
-All providers are mocked (deterministic, no API spend) so we can iterate the routing logic without burning credits and the benchmark stays reproducible.
+> **Source of truth for the design:** [`llm_router_poc_spec_and_dataset/README.md`](llm_router_poc_spec_and_dataset/README.md)
+> **Beginner-friendly walkthrough of the ML choices:** [`LEARN.md`](LEARN.md)
 
 ---
 
-## 2. Design pattern (grounded in literature)
-
-Two-stage routing: **feature extraction → per-model quality prediction → objective-aware reranking**.
-
-This pattern is well-supported:
-
-| Paper / system | Idea we borrow |
-|---|---|
-| **RouteLLM** (LMSYS, [arxiv 2406.18665](https://arxiv.org/abs/2406.18665)) | Matrix-factorization router: `embed(prompt) · W · embed(model) → P(strong wins)`. Threshold sweep on Pareto curve. |
-| **FrugalGPT** (Stanford, [arxiv 2305.05176](https://arxiv.org/abs/2305.05176)) | Sequential cascade: try cheapest → score answer → escalate if below threshold. |
-| **Hybrid LLM** (MSR ICLR'24, [arxiv 2404.14618](https://arxiv.org/html/2404.14618)) | Pseudo-label difficulty from `score_large − score_small`; train cheap classifier on embedding. |
-| **AutoMix** (NeurIPS'23, [arxiv 2310.12963](https://arxiv.org/abs/2310.12963)) | Self-verification + meta-verifier (POMDP/KNN) for noisy escalation. |
-| **BaRP** ([arxiv 2510.07429](https://arxiv.org/abs/2510.07429)) | Contextual bandit (LinUCB) over (prompt features, user-preference vector). |
-| **Portkey Gateway** ([github](https://github.com/Portkey-AI/gateway)) | Composable routing: fallback ⊃ load-balancer ⊃ conditional ⊃ leaf rules. Plugin model. |
-| **LiteLLM** ([github](https://github.com/BerriAI/litellm)) | Cooldown-on-429, priority fallback chains, lowest-TPM strategy. |
-| **RouterBench** (Martian, [arxiv 2403.12031](https://arxiv.org/abs/2403.12031)) | 405k inferences × 11 models × 8 datasets — gold benchmark we can replay against. |
-
----
-
-## 3. Architecture
+## Architecture
 
 ```
-POST /route {prompt, objective}
-        │
-        ▼
-┌─────────────────────┐
-│ FeatureExtractor[]  │  length, task_type, embedding, cacheability
-└─────────┬───────────┘
-          ▼
-┌─────────────────────┐
-│ Cache.lookup        │  exact-hash (P1) → semantic cosine ≥ 0.85 (P2)
-└─────────┬───────────┘
-   miss   │   hit ──► return
-          ▼
-┌─────────────────────┐
-│ QualityPredictor    │  {model_id: predicted_quality}
-└─────────┬───────────┘    plugins: oracle | rule_based | cascade | matrix_factorization
-          ▼
-┌─────────────────────┐
-│ Reranker(objective) │  ordered candidates
-└─────────┬───────────┘    plugins: cost / latency / quality / balanced / pareto
-          ▼
-┌─────────────────────┐
-│ Provider.call       │  retry → CircuitBreaker → next candidate (fallback chain)
-└─────────┬───────────┘    plugins: cheap-fast, fast, premium, local-llama-sim
-          ▼
-   Cache.store + Logger.log(decision, cost, latency, quality)
+                prompt
+                  │
+                  ▼
+        ┌─────────────────────┐
+        │ Prompt Classifier   │   ← all-MiniLM-L6-v2 (frozen) + 6 sklearn heads
+        │  task_type          │     (LogReg + GBM/RF), trained on 1k labeled prompts
+        │  difficulty         │
+        │  required_quality   │
+        │  risk_level         │
+        │  expected_tokens    │
+        │  latency_sensitivity│
+        └─────────┬───────────┘
+                  │
+                  ▼
+        ┌─────────────────────┐
+        │ Capability Table    │   ← static CSV: per (model, task_type, difficulty_bucket)
+        │  cost / latency /   │     → quality_easy / quality_medium / quality_hard
+        │  per-task quality   │     anchored to public benchmarks
+        └─────────┬───────────┘
+                  │
+                  ▼
+        ┌─────────────────────┐
+        │ Router (rules)      │   ← filter: quality ≥ required AND latency ≤ SLA
+        │  cost_first         │     select: by chosen policy
+        │  latency_first      │
+        │  quality_first      │
+        │  balanced           │
+        └─────────┬───────────┘
+                  │
+                  ▼
+       selected_model · estimated_cost_usd · estimated_latency_ms · routing_reason
+```
+
+**Deployment target:** Streamlit Cloud (single Python app, free tier).
+
+---
+
+## Quickstart
+
+```bash
+# 1. install deps (Python 3.10+)
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# 2. train the classifier (downloads MiniLM on first run, ~80 MB)
+python -m classifier.train --data llm_router_poc_spec_and_dataset/prompt_classifier_dataset_1000.jsonl
+
+# 3. evaluate (held-out test + 5-fold cross-validation)
+python -m classifier.eval
+
+# 4. one-off prediction from the CLI
+python -m classifier.predict "Design a real-time chat system with multi-region failover"
+
+# 5. validate the capability table (10 models × 10 task_types × 3 buckets)
+python -m capability.loader --validate
+
+# 6. run the unit tests (router rules, capability validator)
+pytest -q
+
+# 7. launch the Streamlit demo (3-panel UI: classifier · routing · cost)
+streamlit run ui/app.py
 ```
 
 ---
 
-## 4. Plugin model (the core abstraction)
+## What each command does (and what to expect)
 
-Five `Protocol`s + decorator-based registry. Compose via YAML; swap any layer without touching others.
+### `python -m classifier.train --data <jsonl>`
 
+Loads the 1000-row labeled dataset, splits it 80/10/10 stratified by `task_type`, embeds every prompt once with `all-MiniLM-L6-v2`, and fits 6 sklearn heads (3 LogReg classifiers + 2 GradientBoostingRegressors + 1 RandomForestRegressor). Writes:
+- `classifier/artifacts/heads/*.joblib` (6 trained models)
+- `classifier/artifacts/label_encoders/*.joblib` (3 encoders for categorical outputs)
+- `classifier/artifacts/X_{train,val,test}.npy` (cached embeddings, reused by `eval.py`)
+- `classifier/artifacts/{train,val,test}_df.parquet` (the dataset splits)
+- `classifier/artifacts/meta.json` (run metadata)
+
+**Expected console output:**
+```
+[1/5] Loading dataset: llm_router_poc_spec_and_dataset/prompt_classifier_dataset_1000.jsonl
+      → 1000 rows | columns: 9
+[2/5] Stratified split 80/10/10 (stratify=task_type, seed=42)
+      → train=800 | val=100 | test=100
+[3/5] Loading embedding model: all-MiniLM-L6-v2
+      → loaded in 3.5s | dim=384
+[4/5] Embedding prompts (batched)
+      → embedded 1000 prompts in 8.7s
+[5/5] Training 6 heads
+
+Validation summary
+  output                    kind  metric                         time
+  task_type                 cls   val_acc=0.870 f1=0.852         0.4s
+  difficulty                reg   val_mae=0.0612                 1.6s
+  required_quality          reg   val_mae=0.0488                 1.5s
+  risk_level                cls   val_acc=0.910 f1=0.895         0.2s
+  expected_output_tokens    reg   val_mae=87.4                   2.1s
+  latency_sensitivity       cls   val_acc=0.880 f1=0.871         0.2s
+
+Artifacts written → /…/llmrouter/classifier/artifacts
+Next: python -m classifier.eval
+```
+
+(Numbers will vary slightly run-to-run; first run pays a one-time 5–10 s model download.)
+
+### `python -m classifier.eval`
+
+Runs two evaluations:
+1. **Held-out test set** (the 100 rows reserved by `train.py`): per-output accuracy / F1 / MAE / R².
+2. **5-fold stratified cross-validation on all 1000 rows**: mean ± std for each output. This is the honest number to quote for portfolio claims.
+
+**Expected console output (abridged):**
+```
+============================================================
+Held-out test set (1 split, deterministic seed=42)
+============================================================
+Test rows: 100
+
+  task_type                 acc=0.870  macro_f1=0.852  [PASS]
+  difficulty                MAE=0.0612 MAPE= 12.4% R²=+0.821 [PASS]
+  required_quality          MAE=0.0488 MAPE=  6.3% R²=+0.781 [PASS]
+  risk_level                acc=0.910  macro_f1=0.895  [PASS]
+  expected_output_tokens    MAE=87.40  MAPE= 18.2% R²=+0.652 [PASS]
+  latency_sensitivity       acc=0.880  macro_f1=0.871  [PASS]
+
+============================================================
+5-fold cross-validation on full dataset
+============================================================
+Embedding 1000 prompts (one pass)...
+
+  task_type                 macro_f1 = 0.846 ± 0.018   folds=[0.831, 0.864, 0.852, 0.823, 0.860]
+  difficulty                MAE      = 0.0628 ± 0.0034 folds=[0.062, 0.061, 0.066, 0.060, 0.065]
+  required_quality          MAE      = 0.0501 ± 0.0029 …
+  risk_level                macro_f1 = 0.889 ± 0.012   …
+  expected_output_tokens    MAE      = 89.14 ± 4.21    …
+  latency_sensitivity       macro_f1 = 0.872 ± 0.014   …
+
+Full report → classifier/artifacts/eval_report.json
+```
+
+**Pass bar:**
+| Output | Metric | Threshold |
+|---|---|---|
+| `task_type` | macro F1 | ≥ 0.80 |
+| `risk_level` | macro F1 | ≥ 0.80 |
+| `latency_sensitivity` | macro F1 | ≥ 0.80 |
+| `difficulty` | MAE | ≤ 0.10 |
+| `required_quality` | MAE | ≤ 0.10 |
+| `expected_output_tokens` | MAPE | ≤ 25% |
+
+If a head FAILs, see [`LEARN.md`](LEARN.md) for what to try next.
+
+### `python -m classifier.predict "<prompt>"`
+
+Loads the trained heads and runs single-prompt inference (~15–25 ms warm). Prints the structured prediction as JSON.
+
+**Expected output:**
+```json
+{
+  "task_type": "system_design",
+  "task_type_proba": {"coding": 0.04, "system_design": 0.71, "reasoning": 0.18, "...": "..."},
+  "difficulty": 0.84,
+  "required_quality": 0.93,
+  "risk_level": "high",
+  "risk_level_proba": {"low": 0.02, "medium": 0.21, "high": 0.77},
+  "expected_output_tokens": 1080,
+  "latency_sensitivity": "low",
+  "latency_sensitivity_proba": {"low": 0.79, "medium": 0.18, "high": 0.03},
+  "difficulty_bucket": "hard"
+}
+```
+
+### `python -m capability.loader --validate`
+
+Loads `model_capability_table_seed.csv`, prints a one-line summary per model, and validates two invariants: every quality is in `[0, 1]`, and quality is monotone non-increasing across difficulty (`easy ≥ medium ≥ hard`). Exits non-zero on issues.
+
+**Expected output:**
+```
+Loaded 10 models from llm_router_poc_spec_and_dataset/model_capability_table_seed.csv
+  gpt-5.5                   OpenAI             $2.500/$15.000/1M  2500ms  (30 quality entries)
+  gpt-5.4-mini              OpenAI             $0.375/$2.250/1M  1600ms  (30 quality entries)
+  …
+  llama-4-maverick          Meta/hosted        $0.200/$0.600/1M  1100ms  (30 quality entries)
+
+Validation: OK
+```
+
+### `pytest -q`
+
+Runs 21 unit tests across two suites — `tests/test_capability.py` (8 tests on the real CSV) and `tests/test_router.py` (13 tests on a synthetic 3-model fleet covering all 4 policies, SLA filtering, and the fallback path).
+
+**Expected output:**
+```
+.....................                                                    [100%]
+21 passed in 0.04s
+```
+
+### `streamlit run ui/app.py`
+
+Launches the demo on `http://localhost:8501`. First load takes ~5 s to import the embedding model; subsequent prompts are ~15–25 ms.
+
+**The page has:**
+- A prompt input + **Route** button at the top.
+- A sidebar with the **policy selector** (`cost_first` / `latency_first` / `quality_first` / `balanced`), an optional **latency SLA**, and 5 example prompts to pick from.
+- Three columns of results below the input:
+  1. **Classifier** — task_type, difficulty (with bucket), required_quality, risk_level, latency_sensitivity, expected_output_tokens, plus a "Class probabilities" expander.
+  2. **Routing decision** — selected model, provider, policy, human-readable `routing_reason`, eligible list (with the selected one marked), and a rejected expander explaining *why* each rejected model didn't qualify.
+  3. **Cost & latency** — estimated cost in USD, estimated latency, estimated quality, plus a token-level breakdown using the chosen model's per-1M pricing.
+
+If no model meets the bar, the routing panel shows a red **fallback** card with the highest-quality available and an explanation.
+
+---
+
+## Routing the prompt — what `/route` does
+
+After classification, the router consults the capability table and picks a model:
+
+1. **Filter** — drop any model whose quality on `(task_type, difficulty_bucket)` is below the classifier-predicted `required_quality`. If a `latency_sla_ms` is set, drop models that exceed it.
+2. **Rank** — order remaining models by the chosen policy:
+   - `cost_first` — cheapest first
+   - `latency_first` — fastest first
+   - `quality_first` — highest quality first
+   - `balanced` — score = `0.55·Q − 0.25·Cnorm − 0.20·Lnorm`
+3. **Emit** — `RoutingDecision` with selected model, estimated cost, latency, quality, eligible list, rejected reasons, and a human-readable `routing_reason`.
+4. **Fallback** — if no model clears the quality bar, pick the highest-quality available and flag the decision as `fallback=True`.
+
+Programmatic use:
 ```python
-# llmrouter/core/types.py
-class FeatureExtractor(Protocol):  name: str; def extract(prompt, ctx) -> dict
-class QualityPredictor(Protocol):  name: str; def predict(features, models) -> dict[str, float]
-class Reranker(Protocol):          name: str; def rerank(qualities, metas, objective) -> list[ScoredModel]
-class Provider(Protocol):          name: str; meta: ModelMeta; async def call(prompt) -> Response
-class CachePolicy(Protocol):       async def lookup(...); async def store(...)
+from classifier import Classifier
+from capability.loader import load_capability_table
+from router.engine import route_prompt, Objective
 
-# llmrouter/core/registry.py
-@register("provider", "cheap-fast-mock")
-class CheapFastMock(Provider): ...
-```
-
-YAML wires them together:
-
-```yaml
-router:
-  features: [length, task_type, embedding]
-  quality_predictor: rule_based       # oracle | rule_based | cascade | matrix_factorization
-  reranker: balanced                  # cost_first | latency_first | quality_first | balanced | pareto
-  cache: exact_sqlite                 # exact_sqlite | semantic_cosine
-  fallback: cooldown_breaker
-
-objective:
-  mode: balanced                      # cost | latency | quality | balanced
-  weights: { cost: 0.3, latency: 0.2, quality: 0.5 }
-  budget_usd: 0.01
-  sla_ms: 1500
-
-providers:
-  - { name: cheap-fast-model, cost_in_per_1m: 0.05, cost_out_per_1m: 0.20,  latency_p50: 80,   latency_p95: 200,  fail_rate: 0.02,  quality: { qa: 0.60, code: 0.40, reasoning: 0.30, creative: 0.50 } }
-  - { name: fast-model,       cost_in_per_1m: 0.15, cost_out_per_1m: 0.60,  latency_p50: 150,  latency_p95: 400,  fail_rate: 0.01,  quality: { qa: 0.75, code: 0.70, reasoning: 0.60, creative: 0.70 } }
-  - { name: premium-model,    cost_in_per_1m: 3.00, cost_out_per_1m: 15.00, latency_p50: 800,  latency_p95: 2000, fail_rate: 0.005, quality: { qa: 0.92, code: 0.88, reasoning: 0.95, creative: 0.85 } }
-  - { name: local-llama-sim,  cost_in_per_1m: 0.00, cost_out_per_1m: 0.00,  latency_p50: 1200, latency_p95: 3500, fail_rate: 0.03,  quality: { qa: 0.70, code: 0.55, reasoning: 0.50, creative: 0.60 } }
+clf = Classifier()
+models = load_capability_table()
+classifier_output, decision = route_prompt(
+    clf, models,
+    "Design a distributed cache with multi-region failover",
+    Objective(policy="balanced", latency_sla_ms=3000),
+)
 ```
 
 ---
 
-## 5. File layout (target)
+## Repo layout
 
 ```
 llmrouter/
-├── pyproject.toml
-├── README.md
-├── config/default.yaml
-├── llmrouter/
-│   ├── api/{main.py, routes.py, schemas.py}        # FastAPI: /route /benchmark /metrics /health
-│   ├── core/{registry.py, types.py, pipeline.py, config.py}
-│   ├── features/{length.py, task_type.py, embedding.py, cacheability.py}
-│   ├── predictors/{oracle.py, rule_based.py, cascade.py, matrix_factorization.py}
-│   ├── rerankers/{cost_first.py, latency_first.py, quality_first.py, balanced.py, pareto.py}
-│   ├── providers/{mock.py}                          # one parametrized class, 4 instances via config
-│   ├── cache/{exact.py, semantic.py}
-│   ├── policies/{circuit_breaker.py, retry.py}
-│   ├── pricing.py
-│   └── storage/{db.py, schema.sql}                  # SQLite: prompts, decisions, metrics
-├── benchmark/
-│   ├── prompts/labeled_v1.jsonl                     # ~150 prompts: {prompt, task_type, difficulty, expected_tokens}
-│   ├── ground_truth.py                              # samples per-model quality from Beta(α,β) keyed on (model, task_type, difficulty)
-│   ├── runner.py                                    # replay all (predictor × reranker) combos
-│   ├── metrics.py                                   # cost, p50/p95/p99 latency, mean quality, SLO viol, $/quality
-│   └── report.py                                    # markdown table + matplotlib Pareto scatter
-├── tests/{test_pipeline.py, test_providers.py, test_rerankers.py, test_benchmark.py}
-└── scripts/make_prompt_set.py
-```
-
-Deps: `fastapi`, `uvicorn`, `pydantic`, `pyyaml`, `numpy`, `tiktoken`, `matplotlib`, `pytest`, `pytest-asyncio`, `httpx`. Phase 2 adds `sentence-transformers`, `streamlit`.
-
----
-
-## 6. Phased delivery
-
-### Phase 1 — Plugin scaffold + cost/latency/quality routing + benchmark  *(~2 days)*
-- Protocols + registry + YAML loader.
-- Mock provider with `asyncio.sleep(numpy.random.lognormal(...))` latency and Bernoulli failure.
-- Features: `length`, `task_type` (keyword/regex), `cacheability`.
-- Predictors: **oracle** (uses ground-truth — upper bound), **rule_based** (task→model lookup from YAML), **random** (lower bound).
-- Rerankers: all 5 (`cost_first`, `latency_first`, `quality_first`, `balanced`, `pareto`).
-- Cache: exact SHA-256 → SQLite.
-- Fallback: retry-on-fail with next-best candidate.
-- Benchmark: 150 prompts × {3 predictors × 5 rerankers} = **15 policies + 4 baselines** (random, always-cheapest, always-best, oracle).
-- Output: markdown table + Pareto plot.
-
-### Phase 2 — Quality predictors + semantic cache + dashboard  *(~2 days)*
-- `embedding` feature via `sentence-transformers/all-MiniLM-L6-v2` (384-dim, ~10 ms CPU).
-- `semantic_cosine` cache, threshold ≥ 0.85; sweep threshold in benchmark.
-- `cascade` predictor (FrugalGPT) — try cheapest → synthetic scorer → escalate.
-- `difficulty_classifier` predictor (Hybrid LLM) — pseudo-labeled from oracle quality gaps; logistic regression on embedding.
-- `circuit_breaker` policy — 3 consecutive failures → 30s cooldown.
-- Streamlit dashboard: live req/s, hit-rate, cost-burn, fallback rate; benchmark report viewer.
-
-### Phase 3 — Adaptive + load  *(~3 days)*
-- `matrix_factorization` predictor (RouteLLM-style) trained on Phase-1/2 logs.
-- `linucb_bandit` reranker (BaRP-style) with online updates.
-- Locust load test, 1→500 RPS, SLO violation curve.
-- RouterBench subset replay as external sanity check.
-
----
-
-## 7. Benchmark design (the proof-of-router)
-
-**Prompt set:** 150 prompts × `{qa, code, reasoning, creative, summary}` × `{easy, medium, hard}`. JSONL with `expected_tokens`, `task_type`, `difficulty`.
-
-**Ground-truth quality:** for each `(model, task_type, difficulty)`, define a `Beta(α, β)` distribution. At replay, sample once per `(prompt, model)`. The simulator's whole point is that we *know* the right answer.
-
-**Metrics per policy:**
-- Total cost ($), p50 / p95 / p99 latency (ms), mean quality (0–1), cost-per-unit-quality, SLO violation rate (% over `sla_ms`), fallback invocation rate, cache hit rate.
-
-**Baselines (reference bounds):**
-- `random` — quality lower bound, mid cost
-- `always_cheapest` — cost floor, quality floor
-- `always_best` — quality ceiling, cost ceiling
-- `oracle` — knows ground-truth quality, picks per-prompt optimum given objective. Upper bound for any router.
-
-**Headline output:** Pareto plot, cost-per-1k-req on x-axis, mean-quality on y-axis. Each policy is a point. A working router sits on the upper-left frontier above `random`/`always_cheapest` and approaches `oracle`.
-
----
-
-## 8. Build order (Phase 1 priority)
-
-1. `llmrouter/core/types.py` — Protocols, `ModelMeta`, `Objective`, `Response`, `Features`.
-2. `llmrouter/core/registry.py` — decorator registry.
-3. `llmrouter/providers/mock.py` — async mock with latency + failure simulation.
-4. `llmrouter/core/pipeline.py` — orchestrates extract → cache → predict → rerank → call → store → log.
-5. `llmrouter/api/{main,routes,schemas}.py` — FastAPI surface.
-6. `benchmark/{ground_truth,runner}.py` + `benchmark/prompts/labeled_v1.jsonl`.
-7. `tests/test_pipeline.py` — end-to-end test, deterministic seed.
-
----
-
-## 9. Verification
-
-```bash
-uv pip install -e .
-pytest -q
-
-uvicorn llmrouter.api.main:app --reload
-curl -X POST localhost:8000/route -H content-type:application/json \
-  -d '{"prompt":"What is 2+2?","objective":"cost"}'
-
-# Phase 1 success criterion
-python -m benchmark.runner --config config/default.yaml --prompts benchmark/prompts/labeled_v1.jsonl
-# → benchmark/results/run_<ts>.md  + pareto.png
-#
-# pass conditions:
-#   oracle ≥ rule_based ≥ random            on mean_quality
-#   cheapest ≤ rule_based(cost) ≤ best      on total_cost
-#   pareto/balanced sit on the frontier
+├── README.md                           ← you are here
+├── LEARN.md                            ← beginner-friendly ML walkthrough
+├── requirements.txt
+├── .gitignore
+├── classifier/
+│   ├── data.py                         ← JSONL load + stratified split
+│   ├── embed.py                        ← MiniLM wrapper
+│   ├── heads.py                        ← per-output sklearn estimator config
+│   ├── train.py / eval.py / predict.py ← CLIs
+│   └── artifacts/                      ← (gitignored) generated by train.py
+├── capability/
+│   └── loader.py                       ← load + validate capability table; CLI: --validate
+├── router/
+│   └── engine.py                       ← filter + rank + Objective + RoutingDecision
+├── ui/
+│   └── app.py                          ← Streamlit 3-panel demo
+├── tests/
+│   ├── test_capability.py              ← 8 tests on real seed CSV
+│   └── test_router.py                  ← 13 tests on synthetic fleet
+└── llm_router_poc_spec_and_dataset/
+    ├── README.md                       ← canonical design doc
+    ├── TRAINING_METHOD.md
+    ├── model_capability_table_seed.csv ← (model × task_type × difficulty) quality
+    └── prompt_classifier_dataset_1000.{csv,jsonl}
 ```
 
 ---
 
-## 10. Open questions / iterate-on-these
+## Status
 
-1. **Difficulty signal source** — keyword-rules (Phase 1) vs. small classifier (Phase 2)? Rules are fast to ship but biased; classifier is more honest but adds a model dependency.
-2. **Embedding cost accounting** — count embedding latency in measured request latency? (Argument: yes — be honest. A real deployment pays it.)
-3. **Bandit feedback signal** — quality is observable in the simulator (we sampled it), but in the real world it's not. For Phase 3, simulate the realistic case where the bandit only sees a delayed/noisy quality proxy?
-4. **Tenant / budget scope** — single global budget vs. per-tenant in YAML? Tier-3 territory but worth deciding before we lock the schema.
-5. **Streaming** — do we simulate token streaming (TTFT vs total)? Affects latency-policy semantics. Probably Phase 2/3.
-6. **Tokenizer** — `tiktoken` cl100k_base for cost accounting (matches OpenAI tables, free, no model load). Confirm.
-7. **Async everywhere** — assumed yes (latency simulation needs it). Confirm.
-8. **Where does ground-truth live?** — `benchmark/ground_truth.py` only. The runtime pipeline never reads it (except via the explicit `oracle` predictor used as a baseline). Keeps the simulator honest.
+- [x] Capability table extended to (model × task_type × difficulty_bucket)
+- [x] Classifier package (data, embed, heads, train, eval, predict)
+- [x] Capability-table loader + validator
+- [x] Rule-based router with 4 policies + SLA filter + fallback
+- [x] Streamlit UI (3-panel: classifier · routing · cost estimate)
+- [x] Tests (21 passing)
+- [ ] Streamlit Cloud deployment
+
+See [`llm_router_poc_spec_and_dataset/README.md`](llm_router_poc_spec_and_dataset/README.md) for the full design and [`LEARN.md`](LEARN.md) for the model/architecture rationale.

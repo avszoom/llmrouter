@@ -1,0 +1,1001 @@
+id,prompt,task_type,difficulty,difficulty_bucket,required_quality,risk_level,expected_output_tokens,latency_sensitivity
+pc_0001,Compare RabbitMQ and RabbitMQ with tradeoffs.,reasoning,0.651,medium,0.872,high,933,medium
+pc_0002,"Design prompt caching with observability, fallback, and autoscaling.",system_design,0.781,hard,0.97,high,1081,low
+pc_0003,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.683,medium,0.874,high,968,medium
+pc_0004,Create a cinematic video prompt for distributed cache.,creative,0.49,medium,0.662,low,601,medium
+pc_0005,Analyze pros and cons of URL shortener for a high-scale system.,reasoning,0.533,medium,0.887,high,927,medium
+pc_0006,Create an architecture for memory leak optimized for latency and cost.,system_design,0.934,hard,0.97,high,1225,low
+pc_0007,Implement LRU cache in JavaScript.,coding,0.481,medium,0.86,medium,573,medium
+pc_0008,Explain system reliability in simple terms.,factual,0.412,medium,0.781,medium,407,medium
+pc_0009,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.588,medium,0.899,high,907,medium
+pc_0010,"Extract name, email, phone from this text and return valid JSON: The model endpoint has variable latency and some requests need premium quality.",extraction,0.262,easy,0.81,medium,361,high
+pc_0011,"Parse this invoice and return action items, owners, deadlines.",extraction,0.309,easy,0.787,medium,293,high
+pc_0012,Write a professional email to a recruiter about release pipeline.,writing,0.196,easy,0.623,low,300,high
+pc_0013,"Extract name, email, phone from this text and return valid JSON: The team decided to ship next week but wants rollback guardrails and better monitoring.",extraction,0.274,easy,0.809,medium,326,high
+pc_0014,"Parse this invoice and return action items, owners, deadlines.",extraction,0.38,medium,0.807,medium,375,high
+pc_0015,Write a short script for a professional video about customer apology.,creative,0.208,easy,0.637,low,406,medium
+pc_0016,"Find the error in this derivation: The service receives bursty traffic, retries requests, and sometimes returns stale data.",math,0.579,medium,0.931,high,569,low
+pc_0017,Write a persuasive email to a teammate about memory leak.,writing,0.291,easy,0.581,low,448,high
+pc_0018,Create an architecture for memory leak optimized for latency and cost.,system_design,0.852,hard,0.967,high,1120,low
+pc_0019,"Extract key decisions from this meeting note: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",summarization,0.419,medium,0.688,medium,420,high
+pc_0020,Explain real-time chat system in simple terms.,factual,0.435,medium,0.808,medium,422,medium
+pc_0021,Explain the failure modes of release pipeline.,reasoning,0.572,medium,0.876,high,991,medium
+pc_0022,"Summarize this document into 10 bullet points: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",summarization,0.31,easy,0.688,medium,492,high
+pc_0023,"Find the error in this derivation: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",math,0.595,medium,0.946,high,633,low
+pc_0024,Draft a professional message about invoice processing.,writing,0.275,easy,0.582,low,427,high
+pc_0025,Analyze why this service has memory leak under load.,debugging,0.857,hard,0.935,high,913,low
+pc_0026,"Debug this Rust code that fails with deadlock: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.809,hard,0.97,high,801,low
+pc_0027,"Given these constraints, choose the best approach and justify it: def f(items): return items[len(items)]",reasoning,0.676,medium,0.9,high,1095,low
+pc_0028,"Classify this support ticket and extract priority, owner, and due date: def f(items): return items[len(items)]",extraction,0.328,easy,0.781,medium,496,high
+pc_0029,Summarize this document into 3 bullet points: def f(items): return items[len(items)],summarization,0.309,easy,0.718,medium,488,high
+pc_0030,Draft a professional message about Kafka.,writing,0.148,easy,0.637,low,287,high
+pc_0031,"Debug this TypeScript code that fails with deadlock: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.884,hard,0.969,high,902,low
+pc_0032,Fix a incorrect retry behavior in this mobile release system.,debugging,0.674,medium,0.941,high,622,low
+pc_0033,Create an executive summary of this real-time chat system document.,summarization,0.332,easy,0.742,medium,490,high
+pc_0034,Draft a professional message about rate limiting.,writing,0.174,easy,0.614,low,280,high
+pc_0035,Design a multi-region real-time chat system with low latency.,system_design,0.979,hard,0.965,high,1227,low
+pc_0036,Generate unit tests for this C++ function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.58,medium,0.808,medium,688,medium
+pc_0037,Write a casual email to a recruiter about RabbitMQ.,writing,0.232,easy,0.621,low,269,high
+pc_0038,Compare Kubernetes autoscaling and distributed cache with tradeoffs.,reasoning,0.785,hard,0.97,high,1059,low
+pc_0039,"Extract key decisions from this meeting note: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.406,medium,0.746,medium,402,high
+pc_0040,"Generate unit tests for this TypeScript function: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",coding,0.553,medium,0.787,medium,614,medium
+pc_0041,"Extract entities from this paragraph: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.361,medium,0.796,medium,406,high
+pc_0042,Solve this math problem step by step: LLM inference router.,math,0.817,hard,0.937,high,780,low
+pc_0043,Implement sliding window in JavaScript.,coding,0.469,medium,0.798,medium,612,medium
+pc_0044,"Classify this support ticket and extract priority, owner, and due date: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.267,easy,0.769,medium,334,high
+pc_0045,Rewrite this message in a direct tone: def f(items): return items[len(items)],writing,0.175,easy,0.637,low,242,high
+pc_0046,"Debug this Java code that fails with segmentation fault: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.742,hard,0.919,high,818,low
+pc_0047,Extract entities from this paragraph: The team decided to ship next week but wants rollback guardrails and better monitoring.,extraction,0.326,easy,0.753,medium,350,high
+pc_0048,Solve this math problem step by step: race condition.,math,0.8,hard,0.97,high,869,low
+pc_0049,Analyze pros and cons of system reliability for a high-scale system.,reasoning,0.702,hard,0.944,high,1038,low
+pc_0050,Summarize pros and cons of memory leak.,summarization,0.43,medium,0.687,medium,567,high
+pc_0051,Solve this math problem step by step: prompt caching.,math,0.765,hard,0.963,high,762,low
+pc_0052,Compare binary search and race condition with tradeoffs.,reasoning,0.73,hard,0.879,high,1147,medium
+pc_0053,Write a Rust function to invoice processing.,coding,0.508,medium,0.854,medium,573,medium
+pc_0054,"Design multi-region failover with observability, fallback, and autoscaling.",system_design,0.914,hard,0.959,high,1145,low
+pc_0055,Fix a race condition in this messaging system.,debugging,0.881,hard,0.97,high,848,low
+pc_0056,Brainstorm names for a product about Redis.,creative,0.342,easy,0.59,low,402,medium
+pc_0057,"Parse this invoice and return action items, owners, deadlines.",extraction,0.374,medium,0.75,medium,499,high
+pc_0058,Write a TypeScript function to distributed cache.,coding,0.64,medium,0.812,medium,593,medium
+pc_0059,Create a FastAPI endpoint that system reliability.,coding,0.577,medium,0.841,medium,700,medium
+pc_0060,Summarize pros and cons of AI productivity.,summarization,0.361,medium,0.743,medium,379,high
+pc_0061,"Extract invoice number, date, amount from this text and return valid JSON: The team decided to ship next week but wants rollback guardrails and better monitoring.",extraction,0.364,medium,0.794,medium,379,high
+pc_0062,Draft a professional message about Kubernetes autoscaling.,writing,0.212,easy,0.606,low,388,high
+pc_0063,Explain Redis in simple terms.,factual,0.33,easy,0.8,medium,506,medium
+pc_0064,Analyze pros and cons of multi-region failover for a high-scale system.,reasoning,0.742,hard,0.903,high,1011,low
+pc_0065,Extract key decisions from this meeting note: def f(items): return items[len(items)],summarization,0.408,medium,0.738,medium,477,high
+pc_0066,Prove or disprove: AI productivity.,math,0.822,hard,0.97,high,755,low
+pc_0067,Design a multi-region vector database with strong consistency.,system_design,0.862,hard,0.97,high,1140,low
+pc_0068,Debug this JavaScript code that fails with deadlock: The team decided to ship next week but wants rollback guardrails and better monitoring.,debugging,0.856,hard,0.97,high,924,low
+pc_0069,Summarize pros and cons of Redis.,summarization,0.414,medium,0.732,medium,397,high
+pc_0070,Generate unit tests for this Python function: The model endpoint has variable latency and some requests need premium quality.,coding,0.553,medium,0.824,medium,649,medium
+pc_0071,"Parse this invoice and return invoice number, date, amount.",extraction,0.222,easy,0.803,medium,279,high
+pc_0072,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.587,medium,0.91,high,986,low
+pc_0073,Create a short caption for release pipeline.,writing,0.064,easy,0.57,low,243,high
+pc_0074,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.642,medium,0.888,high,961,medium
+pc_0075,Analyze why this service has memory leak under load.,debugging,0.809,hard,0.97,high,812,low
+pc_0076,Summarize this document into 3 bullet points: The model endpoint has variable latency and some requests need premium quality.,summarization,0.32,easy,0.688,medium,430,high
+pc_0077,"Parse this invoice and return name, email, phone.",extraction,0.328,easy,0.785,medium,463,high
+pc_0078,"Given these constraints, choose the best approach and justify it: def f(items): return items[len(items)]",reasoning,0.689,medium,0.948,high,938,low
+pc_0079,Design a multi-region invoice processing with low latency.,system_design,0.865,hard,0.97,high,1237,low
+pc_0080,Create a short caption for customer apology.,writing,0.149,easy,0.607,low,290,high
+pc_0081,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.571,medium,0.93,high,859,low
+pc_0082,Summarize pros and cons of birthday wish.,summarization,0.328,easy,0.726,medium,454,high
+pc_0083,Create a FastAPI endpoint that memory leak.,coding,0.634,medium,0.822,medium,670,medium
+pc_0084,Give a concise overview of URL shortener.,factual,0.313,easy,0.756,medium,450,medium
+pc_0085,Summarize this document into 10 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.371,medium,0.744,medium,496,high
+pc_0086,Create a short caption for Kubernetes autoscaling.,writing,0.121,easy,0.597,low,273,high
+pc_0087,Design a scalable multi-region failover for 10M users.,system_design,0.943,hard,0.953,high,1312,low
+pc_0088,Analyze why this service has incorrect retry behavior under load.,debugging,0.724,hard,0.875,high,669,low
+pc_0089,Find the error in this derivation: def f(items): return items[len(items)],math,0.665,medium,0.965,high,674,low
+pc_0090,"Find the error in this derivation: The service receives bursty traffic, retries requests, and sometimes returns stale data.",math,0.601,medium,0.97,high,579,low
+pc_0091,Create a short caption for birthday wish.,writing,0.173,easy,0.622,low,219,high
+pc_0092,"Design rate limiting with observability, fallback, and autoscaling.",system_design,0.829,hard,0.97,high,1146,low
+pc_0093,Fix a memory leak in this inference system.,debugging,0.829,hard,0.918,high,866,low
+pc_0094,Extract key decisions from this meeting note: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.333,easy,0.71,medium,411,high
+pc_0095,Create a short caption for binary search.,writing,0.115,easy,0.609,low,147,high
+pc_0096,Create a short caption for system reliability.,writing,0.142,easy,0.61,low,166,high
+pc_0097,Summarize pros and cons of AI productivity.,summarization,0.337,easy,0.733,medium,337,high
+pc_0098,Prove or disprove: system reliability.,math,0.693,medium,0.953,high,706,low
+pc_0099,"Extract company, role, location from this text and return valid JSON: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.249,easy,0.751,medium,424,high
+pc_0100,Brainstorm names for a product about Kafka.,creative,0.341,easy,0.575,low,410,medium
+pc_0101,Generate 10 viral reel ideas about Redis.,creative,0.3,easy,0.634,low,416,medium
+pc_0102,Explain LLM inference router in simple terms.,factual,0.361,medium,0.797,medium,379,medium
+pc_0103,"Design release pipeline with observability, fallback, and autoscaling.",system_design,0.802,hard,0.97,high,1051,low
+pc_0104,"Rewrite this message in a casual tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.145,easy,0.596,low,246,high
+pc_0105,Create a FastAPI endpoint that prompt caching.,coding,0.45,medium,0.821,medium,555,medium
+pc_0106,Extract key decisions from this meeting note: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.341,easy,0.687,medium,494,high
+pc_0107,Give a concise overview of system reliability.,factual,0.406,medium,0.819,medium,409,medium
+pc_0108,Extract entities from this paragraph: def f(items): return items[len(items)],extraction,0.286,easy,0.773,medium,419,high
+pc_0109,Rewrite this message in a direct tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.266,easy,0.564,low,286,high
+pc_0110,Calculate URL shortener and explain the reasoning.,math,0.51,medium,0.914,high,599,low
+pc_0111,Rewrite this message in a concise tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.154,easy,0.606,low,318,high
+pc_0112,Compare Kubernetes autoscaling and multi-region failover with tradeoffs.,reasoning,0.76,hard,0.949,high,1028,low
+pc_0113,Implement LRU cache in C++.,coding,0.443,medium,0.784,medium,504,medium
+pc_0114,Explain the failure modes of binary search.,reasoning,0.574,medium,0.946,high,946,low
+pc_0115,"Find the bug in this Rust code and explain the fix: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.756,hard,0.944,high,739,low
+pc_0116,Create an architecture for rate limiting optimized for latency and cost.,system_design,0.842,hard,0.97,high,1204,low
+pc_0117,Design a scalable memory leak for 10M users.,system_design,0.846,hard,0.97,high,1170,low
+pc_0118,Find the error in this derivation: def f(items): return items[len(items)],math,0.703,hard,0.933,high,808,low
+pc_0119,Prove or disprove: rate limiting.,math,0.766,hard,0.97,high,881,low
+pc_0120,Write a short script for a persuasive video about prompt caching.,creative,0.143,easy,0.585,low,189,medium
+pc_0121,Implement LRU cache in Rust.,coding,0.48,medium,0.857,medium,555,medium
+pc_0122,Prove or disprove: multi-region failover.,math,0.803,hard,0.97,high,837,low
+pc_0123,Explain when to use Redis in production systems.,factual,0.518,medium,0.792,medium,661,medium
+pc_0124,Find the bug in this Python code and explain the fix: The model endpoint has variable latency and some requests need premium quality.,debugging,0.727,hard,0.912,high,811,low
+pc_0125,"Extract name, email, phone from this text and return valid JSON: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.252,easy,0.817,medium,326,high
+pc_0126,Explain multi-region failover in simple terms.,factual,0.564,medium,0.814,medium,518,medium
+pc_0127,Create a short caption for distributed cache.,writing,0.186,easy,0.597,low,253,high
+pc_0128,Design a multi-region Kubernetes autoscaling with strong consistency.,system_design,0.904,hard,0.958,high,1133,low
+pc_0129,Fix a incorrect retry behavior in this messaging system.,debugging,0.725,hard,0.925,high,660,low
+pc_0130,Compare URL shortener and memory leak with tradeoffs.,reasoning,0.687,medium,0.906,high,1068,low
+pc_0131,Create a FastAPI endpoint that customer apology.,coding,0.478,medium,0.853,medium,464,medium
+pc_0132,Rewrite this message in a concise tone: def f(items): return items[len(items)],writing,0.191,easy,0.564,low,225,high
+pc_0133,Analyze why this service has incorrect retry behavior under load.,debugging,0.627,medium,0.898,high,579,low
+pc_0134,Solve this math problem step by step: release pipeline.,math,0.829,hard,0.97,high,830,low
+pc_0135,Rewrite this message in a persuasive tone: CPU usage increases after every deployment and memory is not released after requests complete.,writing,0.235,easy,0.594,low,326,high
+pc_0136,"Parse this invoice and return name, email, phone.",extraction,0.236,easy,0.743,medium,383,high
+pc_0137,Design a scalable memory leak for enterprise customers.,system_design,0.932,hard,0.97,high,1204,low
+pc_0138,"Classify this support ticket and extract priority, owner, and due date: def f(items): return items[len(items)]",extraction,0.299,easy,0.818,medium,448,high
+pc_0139,Explain the failure modes of binary search.,reasoning,0.707,hard,0.882,high,1049,medium
+pc_0140,Draft a professional message about birthday wish.,writing,0.126,easy,0.626,low,149,high
+pc_0141,Explain when to use vector database in production systems.,factual,0.524,medium,0.749,medium,668,medium
+pc_0142,"Find the bug in this TypeScript code and explain the fix: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.678,medium,0.941,high,724,low
+pc_0143,Summarize pros and cons of Kafka.,summarization,0.42,medium,0.726,medium,492,high
+pc_0144,What is the difference between RabbitMQ and memory leak?,factual,0.593,medium,0.779,medium,576,medium
+pc_0145,Create an architecture for system reliability optimized for latency and cost.,system_design,0.757,hard,0.97,high,975,low
+pc_0146,Extract entities from this paragraph: The model endpoint has variable latency and some requests need premium quality.,extraction,0.305,easy,0.762,medium,362,high
+pc_0147,Draft a professional message about distributed cache.,writing,0.253,easy,0.637,low,361,high
+pc_0148,Calculate Kubernetes autoscaling and explain the reasoning.,math,0.572,medium,0.904,high,642,low
+pc_0149,"Generate unit tests for this C++ function: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",coding,0.525,medium,0.794,medium,556,medium
+pc_0150,Rewrite this message in a concise tone: def f(items): return items[len(items)],writing,0.142,easy,0.639,low,336,high
+pc_0151,Create a short caption for race condition.,writing,0.217,easy,0.635,low,324,high
+pc_0152,Extract entities from this paragraph: The model endpoint has variable latency and some requests need premium quality.,extraction,0.282,easy,0.769,medium,292,high
+pc_0153,Create a short caption for Redis.,writing,0.05,easy,0.588,low,95,high
+pc_0154,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.631,medium,0.881,high,943,medium
+pc_0155,Explain when to use URL shortener in production systems.,factual,0.389,medium,0.777,medium,394,medium
+pc_0156,Explain vector database in simple terms.,factual,0.442,medium,0.756,medium,485,medium
+pc_0157,Extract entities from this paragraph: CPU usage increases after every deployment and memory is not released after requests complete.,extraction,0.315,easy,0.784,medium,471,high
+pc_0158,Generate 3 viral reel ideas about Kafka.,creative,0.325,easy,0.617,low,402,medium
+pc_0159,Draft a professional message about prompt caching.,writing,0.243,easy,0.613,low,326,high
+pc_0160,"Summarize this document into 3 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.38,medium,0.698,medium,448,high
+pc_0161,Create a FastAPI endpoint that birthday wish.,coding,0.39,medium,0.816,medium,413,medium
+pc_0162,Find the error in this derivation: The model endpoint has variable latency and some requests need premium quality.,math,0.674,medium,0.944,high,644,low
+pc_0163,Design a multi-region system reliability with high availability.,system_design,0.845,hard,0.97,high,1097,low
+pc_0164,Analyze why this service has deadlock under load.,debugging,0.782,hard,0.97,high,829,low
+pc_0165,"Given these constraints, choose the best approach and justify it: CPU usage increases after every deployment and memory is not released after requests complete.",reasoning,0.664,medium,0.924,high,974,low
+pc_0166,Create an executive summary of this URL shortener document.,summarization,0.268,easy,0.723,medium,422,high
+pc_0167,"Parse this invoice and return name, email, phone.",extraction,0.301,easy,0.78,medium,460,high
+pc_0168,Analyze why this service has race condition under load.,debugging,0.865,hard,0.955,high,962,low
+pc_0169,Brainstorm names for a product about distributed cache.,creative,0.356,medium,0.676,low,524,medium
+pc_0170,"Classify this support ticket and extract priority, owner, and due date: def f(items): return items[len(items)]",extraction,0.318,easy,0.774,medium,456,high
+pc_0171,Create an executive summary of this release pipeline document.,summarization,0.428,medium,0.734,medium,417,high
+pc_0172,Summarize pros and cons of multi-region failover.,summarization,0.413,medium,0.731,medium,540,high
+pc_0173,Create a FastAPI endpoint that multi-region failover.,coding,0.696,medium,0.831,medium,799,medium
+pc_0174,Write a C++ function to memory leak.,coding,0.631,medium,0.819,medium,652,medium
+pc_0175,Design a scalable multi-region failover for global traffic.,system_design,0.888,hard,0.97,high,1155,low
+pc_0176,Create a short caption for rate limiting.,writing,0.055,easy,0.568,low,130,high
+pc_0177,Debug this Python code that fails with segmentation fault: The model endpoint has variable latency and some requests need premium quality.,debugging,0.631,medium,0.901,high,753,low
+pc_0178,Summarize this document into 5 bullet points: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.326,easy,0.697,medium,498,high
+pc_0179,Summarize pros and cons of Kafka.,summarization,0.31,easy,0.732,medium,356,high
+pc_0180,Prove or disprove: Kubernetes autoscaling.,math,0.729,hard,0.941,high,667,low
+pc_0181,Solve this math problem step by step: real-time chat system.,math,0.701,hard,0.911,high,635,low
+pc_0182,Draft a professional message about multi-region failover.,writing,0.253,easy,0.566,low,297,high
+pc_0183,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.418,medium,0.689,medium,541,high
+pc_0184,Compare distributed cache and AI productivity with tradeoffs.,reasoning,0.749,hard,0.93,high,1035,low
+pc_0185,Design a scalable binary search for multi-region deployment.,system_design,0.898,hard,0.97,high,1237,low
+pc_0186,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.345,easy,0.711,medium,361,high
+pc_0187,"Extract company, role, location from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.364,medium,0.754,medium,471,high
+pc_0188,Draft a professional message about Kubernetes autoscaling.,writing,0.22,easy,0.597,low,367,high
+pc_0189,"Find the bug in this Java code and explain the fix: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.62,medium,0.923,high,745,low
+pc_0190,Create an architecture for birthday wish optimized for latency and cost.,system_design,0.706,hard,0.97,high,1047,low
+pc_0191,Design a scalable birthday wish for global traffic.,system_design,0.687,medium,0.97,high,1013,low
+pc_0192,Create an architecture for Redis optimized for latency and cost.,system_design,0.77,hard,0.96,high,1075,low
+pc_0193,Write a short script for a warm video about invoice processing.,creative,0.274,easy,0.586,low,285,medium
+pc_0194,Design a multi-region birthday wish with low latency.,system_design,0.775,hard,0.958,high,1023,low
+pc_0195,Summarize this document into 7 bullet points: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.414,medium,0.715,medium,414,high
+pc_0196,Create a short caption for invoice processing.,writing,0.074,easy,0.575,low,164,high
+pc_0197,"Find the bug in this TypeScript code and explain the fix: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.642,medium,0.886,high,709,low
+pc_0198,"Extract company, role, location from this text and return valid JSON: The team decided to ship next week but wants rollback guardrails and better monitoring.",extraction,0.225,easy,0.805,medium,291,high
+pc_0199,Draft a professional message about prompt caching.,writing,0.212,easy,0.639,low,309,high
+pc_0200,Implement retry with exponential backoff in JavaScript.,coding,0.572,medium,0.847,medium,641,medium
+pc_0201,Prove or disprove: release pipeline.,math,0.819,hard,0.957,high,771,low
+pc_0202,Explain prompt caching in simple terms.,factual,0.338,easy,0.751,medium,357,medium
+pc_0203,"Design multi-region failover with observability, fallback, and autoscaling.",system_design,0.868,hard,0.95,high,1247,low
+pc_0204,Find the error in this derivation: CPU usage increases after every deployment and memory is not released after requests complete.,math,0.582,medium,0.918,high,606,low
+pc_0205,Summarize this document into 5 bullet points: def f(items): return items[len(items)],summarization,0.332,easy,0.739,medium,353,high
+pc_0206,Create a FastAPI endpoint that system reliability.,coding,0.462,medium,0.788,medium,509,medium
+pc_0207,Summarize pros and cons of system reliability.,summarization,0.286,easy,0.696,medium,321,high
+pc_0208,"Generate unit tests for this Rust function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.488,medium,0.804,medium,614,medium
+pc_0209,Explain the failure modes of AI productivity.,reasoning,0.612,medium,0.921,high,949,low
+pc_0210,"Classify this support ticket and extract priority, owner, and due date: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.34,easy,0.793,medium,340,high
+pc_0211,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.646,medium,0.876,high,1061,medium
+pc_0212,"Rewrite this message in a friendly tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.144,easy,0.608,low,233,high
+pc_0213,Design a scalable system reliability for enterprise customers.,system_design,0.845,hard,0.959,high,1086,low
+pc_0214,Summarize this document into 7 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.276,easy,0.702,medium,300,high
+pc_0215,Explain the failure modes of binary search.,reasoning,0.707,hard,0.925,high,989,low
+pc_0216,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.409,medium,0.746,medium,508,high
+pc_0217,Summarize this document into 3 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.417,medium,0.736,medium,454,high
+pc_0218,Create a FastAPI endpoint that multi-region failover.,coding,0.628,medium,0.808,medium,629,medium
+pc_0219,Design a scalable memory leak for multi-region deployment.,system_design,0.843,hard,0.97,high,1242,low
+pc_0220,Design a scalable multi-region failover for 100K requests per second.,system_design,0.98,hard,0.97,high,1280,low
+pc_0221,What is the difference between birthday wish and vector database?,factual,0.335,easy,0.795,medium,437,medium
+pc_0222,Create a short caption for Redis.,writing,0.091,easy,0.571,low,113,high
+pc_0223,Explain the failure modes of race condition.,reasoning,0.816,hard,0.97,high,1194,low
+pc_0224,Generate unit tests for this Java function: def f(items): return items[len(items)],coding,0.564,medium,0.832,medium,565,medium
+pc_0225,Implement binary search in TypeScript.,coding,0.571,medium,0.786,medium,564,medium
+pc_0226,Debug this Java code that fails with segmentation fault: The team decided to ship next week but wants rollback guardrails and better monitoring.,debugging,0.671,medium,0.927,high,799,low
+pc_0227,Draft a professional message about binary search.,writing,0.141,easy,0.595,low,258,high
+pc_0228,Create a FastAPI endpoint that AI productivity.,coding,0.537,medium,0.798,medium,574,medium
+pc_0229,What is the difference between birthday wish and prompt caching?,factual,0.374,medium,0.775,medium,522,medium
+pc_0230,Extract key decisions from this meeting note: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.351,medium,0.69,medium,510,high
+pc_0231,Compare system reliability and vector database with tradeoffs.,reasoning,0.631,medium,0.914,high,987,low
+pc_0232,Design a multi-region Kubernetes autoscaling with eventual consistency.,system_design,0.955,hard,0.959,high,1170,low
+pc_0233,Summarize pros and cons of Kafka.,summarization,0.416,medium,0.735,medium,506,high
+pc_0234,Implement sliding window in Python.,coding,0.523,medium,0.817,medium,549,medium
+pc_0235,Explain when to use URL shortener in production systems.,factual,0.396,medium,0.754,medium,457,medium
+pc_0236,Fix a latency spike in this inference system.,debugging,0.724,hard,0.934,high,673,low
+pc_0237,Summarize this document into 10 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.411,medium,0.738,medium,412,high
+pc_0238,Analyze why this service has cache stampede under load.,debugging,0.71,hard,0.948,high,804,low
+pc_0239,Write a Rust function to customer apology.,coding,0.556,medium,0.848,medium,544,medium
+pc_0240,Draft a professional message about binary search.,writing,0.134,easy,0.6,low,223,high
+pc_0241,Summarize pros and cons of distributed cache.,summarization,0.423,medium,0.734,medium,476,high
+pc_0242,Write a JavaScript function to invoice processing.,coding,0.475,medium,0.846,medium,507,medium
+pc_0243,Prove or disprove: release pipeline.,math,0.724,hard,0.956,high,693,low
+pc_0244,Create an architecture for release pipeline optimized for latency and cost.,system_design,0.805,hard,0.954,high,1124,low
+pc_0245,Explain the failure modes of prompt caching.,reasoning,0.637,medium,0.919,high,1048,low
+pc_0246,Write a short script for a direct video about binary search.,creative,0.228,easy,0.585,low,411,medium
+pc_0247,Calculate vector database and explain the reasoning.,math,0.588,medium,0.918,high,652,low
+pc_0248,Explain the failure modes of Kubernetes autoscaling.,reasoning,0.69,medium,0.883,high,989,medium
+pc_0249,Create an architecture for Kubernetes autoscaling optimized for latency and cost.,system_design,0.839,hard,0.97,high,1102,low
+pc_0250,Fix a race condition in this messaging system.,debugging,0.886,hard,0.966,high,947,low
+pc_0251,Implement retry with exponential backoff in Java.,coding,0.465,medium,0.801,medium,465,medium
+pc_0252,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.696,medium,0.914,high,939,low
+pc_0253,Create an architecture for URL shortener optimized for latency and cost.,system_design,0.746,hard,0.936,high,1039,low
+pc_0254,Extract entities from this paragraph: The team decided to ship next week but wants rollback guardrails and better monitoring.,extraction,0.306,easy,0.763,medium,422,high
+pc_0255,Create a cinematic video prompt for invoice processing.,creative,0.221,easy,0.565,low,388,medium
+pc_0256,Analyze pros and cons of distributed cache for a high-scale system.,reasoning,0.704,hard,0.874,high,992,medium
+pc_0257,Solve this math problem step by step: Redis.,math,0.691,medium,0.948,high,633,low
+pc_0258,Generate 7 viral reel ideas about rate limiting.,creative,0.225,easy,0.573,low,277,medium
+pc_0259,Summarize pros and cons of Kubernetes autoscaling.,summarization,0.362,medium,0.712,medium,477,high
+pc_0260,Create a short caption for Kafka.,writing,0.147,easy,0.605,low,168,high
+pc_0261,Brainstorm names for a product about LLM inference router.,creative,0.241,easy,0.612,low,259,medium
+pc_0262,Explain customer apology in simple terms.,factual,0.34,easy,0.803,medium,501,medium
+pc_0263,"Design real-time chat system with observability, fallback, and autoscaling.",system_design,0.817,hard,0.97,high,1059,low
+pc_0264,Calculate LLM inference router and explain the reasoning.,math,0.646,medium,0.952,high,671,low
+pc_0265,Implement sliding window in C++.,coding,0.447,medium,0.821,medium,523,medium
+pc_0266,Create an executive summary of this real-time chat system document.,summarization,0.377,medium,0.721,medium,442,high
+pc_0267,Create a FastAPI endpoint that release pipeline.,coding,0.525,medium,0.809,medium,642,medium
+pc_0268,Create a short caption for birthday wish.,writing,0.077,easy,0.601,low,166,high
+pc_0269,"Parse this invoice and return invoice number, date, amount.",extraction,0.254,easy,0.753,medium,350,high
+pc_0270,"Rewrite this message in a friendly tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.273,easy,0.608,low,406,high
+pc_0271,Compare LLM inference router and Kafka with tradeoffs.,reasoning,0.67,medium,0.911,high,941,low
+pc_0272,Create an architecture for prompt caching optimized for latency and cost.,system_design,0.787,hard,0.962,high,1023,low
+pc_0273,Extract entities from this paragraph: CPU usage increases after every deployment and memory is not released after requests complete.,extraction,0.324,easy,0.782,medium,399,high
+pc_0274,Draft a professional message about memory leak.,writing,0.38,medium,0.643,low,401,high
+pc_0275,Write a concise email to an engineering team about distributed cache.,writing,0.344,easy,0.58,low,459,high
+pc_0276,Generate unit tests for this C++ function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.475,medium,0.836,medium,621,medium
+pc_0277,"Summarize this document into 5 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.332,easy,0.731,medium,335,high
+pc_0278,Summarize pros and cons of LLM inference router.,summarization,0.375,medium,0.703,medium,500,high
+pc_0279,"Rewrite this message in a persuasive tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.147,easy,0.563,low,216,high
+pc_0280,Compare Redis and memory leak with tradeoffs.,reasoning,0.778,hard,0.968,high,1134,low
+pc_0281,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.659,medium,0.91,high,977,low
+pc_0282,Extract key decisions from this meeting note: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.289,easy,0.685,medium,437,high
+pc_0283,"Parse this invoice and return company, role, location.",extraction,0.309,easy,0.754,medium,372,high
+pc_0284,Implement LRU cache in JavaScript.,coding,0.554,medium,0.808,medium,699,medium
+pc_0285,Summarize this document into 3 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.299,easy,0.741,medium,414,high
+pc_0286,Explain when to use real-time chat system in production systems.,factual,0.526,medium,0.796,medium,594,medium
+pc_0287,Explain memory leak in simple terms.,factual,0.485,medium,0.789,medium,535,medium
+pc_0288,Extract entities from this paragraph: def f(items): return items[len(items)],extraction,0.335,easy,0.804,medium,457,high
+pc_0289,Create a FastAPI endpoint that real-time chat system.,coding,0.468,medium,0.825,medium,572,medium
+pc_0290,Draft a professional message about release pipeline.,writing,0.209,easy,0.625,low,295,high
+pc_0291,Draft a professional message about vector database.,writing,0.181,easy,0.583,low,344,high
+pc_0292,Create an executive summary of this race condition document.,summarization,0.437,medium,0.701,medium,566,high
+pc_0293,Generate unit tests for this Java function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.532,medium,0.786,medium,524,medium
+pc_0294,Write a Rust function to customer apology.,coding,0.525,medium,0.851,medium,555,medium
+pc_0295,"Parse this invoice and return invoice number, date, amount.",extraction,0.376,medium,0.783,medium,418,high
+pc_0296,Find the error in this derivation: CPU usage increases after every deployment and memory is not released after requests complete.,math,0.656,medium,0.954,high,700,low
+pc_0297,Give a concise overview of real-time chat system.,factual,0.418,medium,0.801,medium,459,medium
+pc_0298,Analyze pros and cons of system reliability for a high-scale system.,reasoning,0.605,medium,0.876,high,1004,medium
+pc_0299,"Classify this support ticket and extract priority, owner, and due date: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.264,easy,0.79,medium,302,high
+pc_0300,Explain system reliability in simple terms.,factual,0.304,easy,0.741,medium,343,medium
+pc_0301,Create a FastAPI endpoint that rate limiting.,coding,0.495,medium,0.795,medium,514,medium
+pc_0302,Write a TypeScript function to memory leak.,coding,0.602,medium,0.857,medium,623,medium
+pc_0303,Summarize this document into 10 bullet points: def f(items): return items[len(items)],summarization,0.371,medium,0.706,medium,387,high
+pc_0304,Explain AI productivity in simple terms.,factual,0.389,medium,0.814,medium,554,medium
+pc_0305,Compare multi-region failover and real-time chat system with tradeoffs.,reasoning,0.807,hard,0.912,high,1112,low
+pc_0306,Implement sliding window in Java.,coding,0.495,medium,0.849,medium,603,medium
+pc_0307,Calculate real-time chat system and explain the reasoning.,math,0.669,medium,0.919,high,756,low
+pc_0308,"Classify this support ticket and extract priority, owner, and due date: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.235,easy,0.793,medium,241,high
+pc_0309,Create an executive summary of this Kafka document.,summarization,0.37,medium,0.727,medium,356,high
+pc_0310,Implement retry with exponential backoff in TypeScript.,coding,0.547,medium,0.785,medium,652,medium
+pc_0311,Explain Kubernetes autoscaling in simple terms.,factual,0.395,medium,0.786,medium,410,medium
+pc_0312,Find the error in this derivation: def f(items): return items[len(items)],math,0.675,medium,0.933,high,756,low
+pc_0313,Fix a cache stampede in this distributed system.,debugging,0.888,hard,0.93,high,899,low
+pc_0314,Analyze why this service has race condition under load.,debugging,0.872,hard,0.97,high,900,low
+pc_0315,Calculate invoice processing and explain the reasoning.,math,0.661,medium,0.936,high,647,low
+pc_0316,Design a scalable customer apology for 10M users.,system_design,0.776,hard,0.97,high,1095,low
+pc_0317,Create an executive summary of this AI productivity document.,summarization,0.322,easy,0.736,medium,342,high
+pc_0318,Draft a professional message about prompt caching.,writing,0.211,easy,0.564,low,311,high
+pc_0319,Explain race condition in simple terms.,factual,0.57,medium,0.782,medium,576,medium
+pc_0320,Create a short caption for binary search.,writing,0.145,easy,0.622,low,196,high
+pc_0321,Create a FastAPI endpoint that invoice processing.,coding,0.572,medium,0.854,medium,589,medium
+pc_0322,Create a short caption for Kubernetes autoscaling.,writing,0.16,easy,0.604,low,325,high
+pc_0323,Design a multi-region memory leak with cost efficiency.,system_design,0.848,hard,0.97,high,1053,low
+pc_0324,Draft a professional message about rate limiting.,writing,0.259,easy,0.603,low,296,high
+pc_0325,Extract entities from this paragraph: CPU usage increases after every deployment and memory is not released after requests complete.,extraction,0.276,easy,0.79,medium,324,high
+pc_0326,Fix a latency spike in this inference system.,debugging,0.737,hard,0.912,high,829,low
+pc_0327,Analyze pros and cons of prompt caching for a high-scale system.,reasoning,0.657,medium,0.934,high,923,low
+pc_0328,What is the difference between multi-region failover and prompt caching?,factual,0.606,medium,0.801,medium,650,medium
+pc_0329,"Generate unit tests for this Python function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.457,medium,0.799,medium,593,medium
+pc_0330,Create a short caption for real-time chat system.,writing,0.076,easy,0.593,low,97,high
+pc_0331,Explain when to use Kafka in production systems.,factual,0.467,medium,0.806,medium,611,medium
+pc_0332,Explain when to use vector database in production systems.,factual,0.527,medium,0.743,medium,577,medium
+pc_0333,Solve this math problem step by step: invoice processing.,math,0.764,hard,0.97,high,702,low
+pc_0334,Design a scalable system reliability for global traffic.,system_design,0.734,hard,0.936,high,1120,low
+pc_0335,Design a multi-region LLM inference router with eventual consistency.,system_design,0.98,hard,0.97,high,1260,low
+pc_0336,"Rewrite this message in a direct tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.149,easy,0.632,low,207,high
+pc_0337,Create a short caption for customer apology.,writing,0.111,easy,0.608,low,125,high
+pc_0338,"Classify this support ticket and extract priority, owner, and due date: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.268,easy,0.814,medium,269,high
+pc_0339,Summarize pros and cons of Kubernetes autoscaling.,summarization,0.329,easy,0.71,medium,326,high
+pc_0340,Brainstorm names for a product about LLM inference router.,creative,0.331,easy,0.609,low,338,medium
+pc_0341,Solve this math problem step by step: Kubernetes autoscaling.,math,0.769,hard,0.97,high,811,low
+pc_0342,"Find the bug in this TypeScript code and explain the fix: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.686,medium,0.897,high,756,low
+pc_0343,Analyze pros and cons of Kubernetes autoscaling for a high-scale system.,reasoning,0.633,medium,0.916,high,875,low
+pc_0344,"Parse this invoice and return action items, owners, deadlines.",extraction,0.368,medium,0.744,medium,476,high
+pc_0345,Give a concise overview of AI productivity.,factual,0.455,medium,0.753,medium,572,medium
+pc_0346,Implement binary search in TypeScript.,coding,0.455,medium,0.804,medium,444,medium
+pc_0347,Write a Rust function to LLM inference router.,coding,0.544,medium,0.791,medium,517,medium
+pc_0348,Calculate invoice processing and explain the reasoning.,math,0.712,hard,0.898,high,831,low
+pc_0349,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.589,medium,0.882,high,900,medium
+pc_0350,"Summarize this document into 7 bullet points: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",summarization,0.281,easy,0.729,medium,355,high
+pc_0351,Find the error in this derivation: The model endpoint has variable latency and some requests need premium quality.,math,0.665,medium,0.937,high,771,low
+pc_0352,"Design Kubernetes autoscaling with observability, fallback, and autoscaling.",system_design,0.77,hard,0.97,high,1180,low
+pc_0353,Analyze why this service has deadlock under load.,debugging,0.745,hard,0.908,high,752,low
+pc_0354,Analyze why this service has deadlock under load.,debugging,0.825,hard,0.942,high,836,low
+pc_0355,"Parse this invoice and return invoice number, date, amount.",extraction,0.331,easy,0.754,medium,482,high
+pc_0356,Draft a professional message about vector database.,writing,0.25,easy,0.622,low,339,high
+pc_0357,Explain when to use LLM inference router in production systems.,factual,0.462,medium,0.756,medium,597,medium
+pc_0358,Give a concise overview of race condition.,factual,0.603,medium,0.806,medium,633,medium
+pc_0359,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.376,medium,0.718,medium,397,high
+pc_0360,Find the error in this derivation: def f(items): return items[len(items)],math,0.64,medium,0.969,high,594,low
+pc_0361,Summarize pros and cons of vector database.,summarization,0.3,easy,0.728,medium,431,high
+pc_0362,Find the bug in this Python code and explain the fix: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.697,medium,0.925,high,658,low
+pc_0363,Create an architecture for LLM inference router optimized for latency and cost.,system_design,0.821,hard,0.97,high,1107,low
+pc_0364,Compare AI productivity and customer apology with tradeoffs.,reasoning,0.718,hard,0.93,high,1126,low
+pc_0365,Prove or disprove: prompt caching.,math,0.771,hard,0.97,high,756,low
+pc_0366,What is the difference between Redis and Redis?,factual,0.412,medium,0.796,medium,504,medium
+pc_0367,"Extract action items, owners, deadlines from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.312,easy,0.807,medium,308,high
+pc_0368,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.683,medium,0.908,high,947,low
+pc_0369,Find the error in this derivation: The model endpoint has variable latency and some requests need premium quality.,math,0.707,hard,0.917,high,699,low
+pc_0370,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.272,easy,0.681,medium,277,high
+pc_0371,Draft a professional message about distributed cache.,writing,0.39,medium,0.663,low,416,high
+pc_0372,Compare LLM inference router and vector database with tradeoffs.,reasoning,0.72,hard,0.921,high,1011,low
+pc_0373,Brainstorm names for a product about Redis.,creative,0.29,easy,0.599,low,327,medium
+pc_0374,Explain the failure modes of distributed cache.,reasoning,0.696,medium,0.876,high,1107,medium
+pc_0375,Explain when to use real-time chat system in production systems.,factual,0.462,medium,0.781,medium,619,medium
+pc_0376,Analyze why this service has cache stampede under load.,debugging,0.729,hard,0.902,high,810,low
+pc_0377,Compare binary search and LLM inference router with tradeoffs.,reasoning,0.681,medium,0.942,high,1070,low
+pc_0378,Create an architecture for multi-region failover optimized for latency and cost.,system_design,0.902,hard,0.97,high,1260,low
+pc_0379,Explain when to use AI productivity in production systems.,factual,0.52,medium,0.81,medium,609,medium
+pc_0380,Create an executive summary of this real-time chat system document.,summarization,0.298,easy,0.684,medium,360,high
+pc_0381,Summarize pros and cons of prompt caching.,summarization,0.4,medium,0.759,medium,542,high
+pc_0382,Generate unit tests for this Rust function: def f(items): return items[len(items)],coding,0.541,medium,0.793,medium,584,medium
+pc_0383,Calculate prompt caching and explain the reasoning.,math,0.718,hard,0.947,high,791,low
+pc_0384,Explain when to use real-time chat system in production systems.,factual,0.399,medium,0.78,medium,390,medium
+pc_0385,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.644,medium,0.92,high,930,low
+pc_0386,Explain real-time chat system in simple terms.,factual,0.36,medium,0.767,medium,529,medium
+pc_0387,"Debug this Rust code that fails with IndexError: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.713,hard,0.904,high,826,low
+pc_0388,Create an architecture for binary search optimized for latency and cost.,system_design,0.729,hard,0.945,high,1004,low
+pc_0389,Explain the failure modes of rate limiting.,reasoning,0.615,medium,0.879,high,971,medium
+pc_0390,Analyze why this service has memory leak under load.,debugging,0.878,hard,0.927,high,897,low
+pc_0391,Fix a memory leak in this database system.,debugging,0.899,hard,0.969,high,922,low
+pc_0392,Draft a professional message about customer apology.,writing,0.141,easy,0.584,low,315,high
+pc_0393,Write a warm email to a customer about URL shortener.,writing,0.114,easy,0.611,low,287,high
+pc_0394,Draft a professional message about birthday wish.,writing,0.181,easy,0.619,low,197,high
+pc_0395,Fix a cache stampede in this inference system.,debugging,0.733,hard,0.886,high,738,low
+pc_0396,"Extract company, role, location from this text and return valid JSON: The model endpoint has variable latency and some requests need premium quality.",extraction,0.23,easy,0.768,medium,349,high
+pc_0397,Debug this Java code that fails with IndexError: The team decided to ship next week but wants rollback guardrails and better monitoring.,debugging,0.773,hard,0.916,high,729,low
+pc_0398,Explain customer apology in simple terms.,factual,0.361,medium,0.792,medium,410,medium
+pc_0399,"Extract company, role, location from this text and return valid JSON: def f(items): return items[len(items)]",extraction,0.291,easy,0.764,medium,310,high
+pc_0400,What is the difference between RabbitMQ and customer apology?,factual,0.484,medium,0.763,medium,485,medium
+pc_0401,Design a multi-region distributed cache with strict privacy.,system_design,0.891,hard,0.97,high,1182,low
+pc_0402,Find the bug in this TypeScript code and explain the fix: The team decided to ship next week but wants rollback guardrails and better monitoring.,debugging,0.673,medium,0.926,high,723,low
+pc_0403,What is the difference between invoice processing and binary search?,factual,0.434,medium,0.807,medium,513,medium
+pc_0404,Write a Java function to vector database.,coding,0.483,medium,0.819,medium,594,medium
+pc_0405,Compare memory leak and real-time chat system with tradeoffs.,reasoning,0.846,hard,0.97,high,1071,low
+pc_0406,"Extract entities from this paragraph: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.296,easy,0.809,medium,366,high
+pc_0407,Draft a professional message about race condition.,writing,0.373,medium,0.633,low,472,high
+pc_0408,Create a short caption for Kubernetes autoscaling.,writing,0.145,easy,0.631,low,258,high
+pc_0409,Extract entities from this paragraph: def f(items): return items[len(items)],extraction,0.359,medium,0.79,medium,456,high
+pc_0410,Design a scalable prompt caching for 100K requests per second.,system_design,0.728,hard,0.939,high,1111,low
+pc_0411,Write a Python function to birthday wish.,coding,0.468,medium,0.802,medium,605,medium
+pc_0412,Create an architecture for prompt caching optimized for latency and cost.,system_design,0.736,hard,0.922,high,1011,low
+pc_0413,"Extract action items, owners, deadlines from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.304,easy,0.818,medium,332,high
+pc_0414,Create an architecture for RabbitMQ optimized for latency and cost.,system_design,0.842,hard,0.959,high,1049,low
+pc_0415,Brainstorm names for a product about release pipeline.,creative,0.222,easy,0.568,low,249,medium
+pc_0416,Analyze pros and cons of URL shortener for a high-scale system.,reasoning,0.615,medium,0.919,high,981,low
+pc_0417,Solve this math problem step by step: AI productivity.,math,0.826,hard,0.968,high,910,low
+pc_0418,Analyze pros and cons of URL shortener for a high-scale system.,reasoning,0.508,medium,0.881,high,956,medium
+pc_0419,Generate unit tests for this C++ function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.509,medium,0.803,medium,571,medium
+pc_0420,"Extract name, email, phone from this text and return valid JSON: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.243,easy,0.772,medium,387,high
+pc_0421,Create an executive summary of this Kafka document.,summarization,0.314,easy,0.743,medium,460,high
+pc_0422,Generate unit tests for this TypeScript function: CPU usage increases after every deployment and memory is not released after requests complete.,coding,0.521,medium,0.791,medium,497,medium
+pc_0423,Design a scalable customer apology for 10M users.,system_design,0.84,hard,0.97,high,1163,low
+pc_0424,"Classify this support ticket and extract priority, owner, and due date: def f(items): return items[len(items)]",extraction,0.291,easy,0.743,medium,322,high
+pc_0425,Prove or disprove: customer apology.,math,0.776,hard,0.968,high,832,low
+pc_0426,Summarize this document into 7 bullet points: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.326,easy,0.739,medium,312,high
+pc_0427,Create a cinematic video prompt for race condition.,creative,0.354,medium,0.665,low,408,medium
+pc_0428,"Extract key decisions from this meeting note: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.274,easy,0.705,medium,408,high
+pc_0429,Generate unit tests for this TypeScript function: The model endpoint has variable latency and some requests need premium quality.,coding,0.478,medium,0.815,medium,563,medium
+pc_0430,Compare Kafka and Kubernetes autoscaling with tradeoffs.,reasoning,0.705,hard,0.878,high,1015,medium
+pc_0431,Explain customer apology in simple terms.,factual,0.322,easy,0.772,medium,462,medium
+pc_0432,Analyze why this service has latency spike under load.,debugging,0.756,hard,0.97,high,816,low
+pc_0433,Design a scalable rate limiting for 100K requests per second.,system_design,0.821,hard,0.97,high,1096,low
+pc_0434,What is the difference between RabbitMQ and memory leak?,factual,0.649,medium,0.774,medium,590,medium
+pc_0435,"Parse this invoice and return name, email, phone.",extraction,0.268,easy,0.745,medium,361,high
+pc_0436,Write a TypeScript function to RabbitMQ.,coding,0.553,medium,0.839,medium,691,medium
+pc_0437,Design a multi-region real-time chat system with eventual consistency.,system_design,0.9,hard,0.97,high,1175,low
+pc_0438,Find the error in this derivation: def f(items): return items[len(items)],math,0.717,hard,0.944,high,703,low
+pc_0439,"Find the error in this derivation: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",math,0.604,medium,0.961,high,655,low
+pc_0440,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.682,medium,0.911,high,999,low
+pc_0441,Generate unit tests for this JavaScript function: The model endpoint has variable latency and some requests need premium quality.,coding,0.512,medium,0.789,medium,528,medium
+pc_0442,Calculate race condition and explain the reasoning.,math,0.704,hard,0.919,high,727,low
+pc_0443,Implement LRU cache in TypeScript.,coding,0.519,medium,0.828,medium,509,medium
+pc_0444,Create a short caption for distributed cache.,writing,0.311,easy,0.625,low,362,high
+pc_0445,Explain when to use race condition in production systems.,factual,0.495,medium,0.818,medium,510,medium
+pc_0446,Explain the failure modes of prompt caching.,reasoning,0.631,medium,0.904,high,1018,low
+pc_0447,Explain release pipeline in simple terms.,factual,0.331,easy,0.79,medium,387,medium
+pc_0448,"Generate unit tests for this Rust function: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",coding,0.534,medium,0.815,medium,549,medium
+pc_0449,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.413,medium,0.705,medium,505,high
+pc_0450,Write a short script for a concise video about release pipeline.,creative,0.159,easy,0.632,low,290,medium
+pc_0451,Draft a professional message about customer apology.,writing,0.24,easy,0.626,low,377,high
+pc_0452,Analyze pros and cons of birthday wish for a high-scale system.,reasoning,0.599,medium,0.924,high,939,low
+pc_0453,Write a TypeScript function to real-time chat system.,coding,0.575,medium,0.832,medium,633,medium
+pc_0454,What is the difference between multi-region failover and Kubernetes autoscaling?,factual,0.528,medium,0.802,medium,581,medium
+pc_0455,Write a casual email to a teammate about URL shortener.,writing,0.137,easy,0.589,low,170,high
+pc_0456,Implement rate limiter in TypeScript.,coding,0.426,medium,0.807,medium,510,medium
+pc_0457,Design a multi-region customer apology with low latency.,system_design,0.949,hard,0.97,high,1200,low
+pc_0458,"Find the error in this derivation: The service receives bursty traffic, retries requests, and sometimes returns stale data.",math,0.627,medium,0.937,high,758,low
+pc_0459,Debug this TypeScript code that fails with segmentation fault: The team decided to ship next week but wants rollback guardrails and better monitoring.,debugging,0.692,medium,0.935,high,705,low
+pc_0460,"Parse this invoice and return action items, owners, deadlines.",extraction,0.325,easy,0.777,medium,409,high
+pc_0461,Explain the failure modes of vector database.,reasoning,0.681,medium,0.885,high,915,medium
+pc_0462,Extract entities from this paragraph: The team decided to ship next week but wants rollback guardrails and better monitoring.,extraction,0.247,easy,0.752,medium,418,high
+pc_0463,Analyze why this service has deadlock under load.,debugging,0.876,hard,0.945,high,880,low
+pc_0464,Fix a memory leak in this database system.,debugging,0.829,hard,0.931,high,899,low
+pc_0465,Create a FastAPI endpoint that vector database.,coding,0.49,medium,0.821,medium,596,medium
+pc_0466,Create an architecture for real-time chat system optimized for latency and cost.,system_design,0.753,hard,0.97,high,992,low
+pc_0467,Explain the failure modes of Kafka.,reasoning,0.73,hard,0.899,high,1016,medium
+pc_0468,Implement LRU cache in Rust.,coding,0.579,medium,0.843,medium,718,medium
+pc_0469,Create a short caption for vector database.,writing,0.05,easy,0.568,low,233,high
+pc_0470,Create an executive summary of this Kubernetes autoscaling document.,summarization,0.34,easy,0.713,medium,515,high
+pc_0471,Rewrite this message in a casual tone: CPU usage increases after every deployment and memory is not released after requests complete.,writing,0.241,easy,0.602,low,292,high
+pc_0472,Summarize pros and cons of invoice processing.,summarization,0.324,easy,0.712,medium,502,high
+pc_0473,Summarize pros and cons of release pipeline.,summarization,0.389,medium,0.753,medium,362,high
+pc_0474,What is the difference between invoice processing and multi-region failover?,factual,0.544,medium,0.798,medium,680,medium
+pc_0475,Extract key decisions from this meeting note: def f(items): return items[len(items)],summarization,0.386,medium,0.759,medium,386,high
+pc_0476,Design a scalable Redis for enterprise customers.,system_design,0.721,hard,0.937,high,1002,low
+pc_0477,Design a multi-region Kubernetes autoscaling with eventual consistency.,system_design,0.871,hard,0.97,high,1186,low
+pc_0478,Create an executive summary of this race condition document.,summarization,0.474,medium,0.727,medium,565,medium
+pc_0479,Brainstorm names for a product about prompt caching.,creative,0.24,easy,0.617,low,267,medium
+pc_0480,Design a scalable invoice processing for 100K requests per second.,system_design,0.766,hard,0.97,high,1011,low
+pc_0481,"Generate unit tests for this Rust function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.551,medium,0.819,medium,529,medium
+pc_0482,Prove or disprove: race condition.,math,0.771,hard,0.967,high,800,low
+pc_0483,Explain the failure modes of LLM inference router.,reasoning,0.614,medium,0.877,high,894,medium
+pc_0484,Design a scalable system reliability for enterprise customers.,system_design,0.84,hard,0.97,high,1048,low
+pc_0485,Create an executive summary of this Kafka document.,summarization,0.408,medium,0.682,medium,487,high
+pc_0486,Extract entities from this paragraph: def f(items): return items[len(items)],extraction,0.343,easy,0.752,medium,425,high
+pc_0487,Design a multi-region binary search with cost efficiency.,system_design,0.9,hard,0.97,high,1125,low
+pc_0488,Rewrite this message in a professional tone: The team decided to ship next week but wants rollback guardrails and better monitoring.,writing,0.197,easy,0.593,low,256,high
+pc_0489,Create a short caption for distributed cache.,writing,0.285,easy,0.571,low,410,high
+pc_0490,Create an executive summary of this system reliability document.,summarization,0.314,easy,0.7,medium,470,high
+pc_0491,Generate unit tests for this JavaScript function: def f(items): return items[len(items)],coding,0.532,medium,0.846,medium,666,medium
+pc_0492,Prove or disprove: vector database.,math,0.724,hard,0.967,high,729,low
+pc_0493,"Rewrite this message in a persuasive tone: The service receives bursty traffic, retries requests, and sometimes returns stale data.",writing,0.133,easy,0.63,low,309,high
+pc_0494,Write a casual email to a manager about distributed cache.,writing,0.311,easy,0.578,low,299,high
+pc_0495,Create a cinematic video prompt for Kafka.,creative,0.333,easy,0.577,low,363,medium
+pc_0496,Explain the failure modes of prompt caching.,reasoning,0.598,medium,0.917,high,1028,low
+pc_0497,Rewrite this message in a direct tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.229,easy,0.631,low,224,high
+pc_0498,Write a TypeScript function to race condition.,coding,0.584,medium,0.814,medium,640,medium
+pc_0499,Explain binary search in simple terms.,factual,0.34,easy,0.79,medium,342,medium
+pc_0500,Draft a professional message about prompt caching.,writing,0.247,easy,0.635,low,437,high
+pc_0501,Explain the failure modes of multi-region failover.,reasoning,0.7,medium,0.934,high,938,low
+pc_0502,Explain when to use release pipeline in production systems.,factual,0.47,medium,0.776,medium,547,medium
+pc_0503,Write a Python function to invoice processing.,coding,0.565,medium,0.79,medium,639,medium
+pc_0504,Give a concise overview of vector database.,factual,0.524,medium,0.8,medium,554,medium
+pc_0505,Analyze pros and cons of Kubernetes autoscaling for a high-scale system.,reasoning,0.608,medium,0.936,high,989,low
+pc_0506,Draft a professional message about Kafka.,writing,0.231,easy,0.628,low,370,high
+pc_0507,Generate unit tests for this Java function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.52,medium,0.799,medium,659,medium
+pc_0508,Create a cinematic video prompt for Kafka.,creative,0.266,easy,0.576,low,405,medium
+pc_0509,Create a cinematic video prompt for Kafka.,creative,0.251,easy,0.574,low,310,medium
+pc_0510,"Summarize this document into 7 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.426,medium,0.76,medium,503,high
+pc_0511,Design a scalable real-time chat system for 10M users.,system_design,0.814,hard,0.97,high,1096,low
+pc_0512,"Extract key decisions from this meeting note: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",summarization,0.351,medium,0.74,medium,493,high
+pc_0513,Create a cinematic video prompt for invoice processing.,creative,0.367,medium,0.657,low,351,medium
+pc_0514,"Parse this invoice and return action items, owners, deadlines.",extraction,0.241,easy,0.747,medium,348,high
+pc_0515,Prove or disprove: release pipeline.,math,0.734,hard,0.892,high,766,low
+pc_0516,"Classify this support ticket and extract priority, owner, and due date: def f(items): return items[len(items)]",extraction,0.252,easy,0.756,medium,328,high
+pc_0517,Give a concise overview of Kafka.,factual,0.372,medium,0.792,medium,540,medium
+pc_0518,Summarize pros and cons of Kafka.,summarization,0.34,easy,0.748,medium,326,high
+pc_0519,Implement topological sort in Java.,coding,0.472,medium,0.782,medium,439,medium
+pc_0520,Create an executive summary of this multi-region failover document.,summarization,0.407,medium,0.726,medium,491,high
+pc_0521,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.607,medium,0.923,high,863,low
+pc_0522,Debug this Java code that fails with NullPointerException: def f(items): return items[len(items)],debugging,0.631,medium,0.946,high,618,low
+pc_0523,Create an executive summary of this customer apology document.,summarization,0.429,medium,0.716,medium,496,high
+pc_0524,Analyze pros and cons of prompt caching for a high-scale system.,reasoning,0.705,hard,0.933,high,1029,low
+pc_0525,Analyze pros and cons of URL shortener for a high-scale system.,reasoning,0.602,medium,0.873,high,881,medium
+pc_0526,Give a concise overview of Kafka.,factual,0.41,medium,0.78,medium,496,medium
+pc_0527,Write a persuasive email to a manager about memory leak.,writing,0.347,easy,0.597,low,443,high
+pc_0528,Write a concise email to a teammate about invoice processing.,writing,0.206,easy,0.591,low,223,high
+pc_0529,Compare real-time chat system and invoice processing with tradeoffs.,reasoning,0.578,medium,0.921,high,953,low
+pc_0530,Compare invoice processing and release pipeline with tradeoffs.,reasoning,0.573,medium,0.872,high,819,medium
+pc_0531,Implement topological sort in Python.,coding,0.52,medium,0.83,medium,610,medium
+pc_0532,Create a FastAPI endpoint that Kafka.,coding,0.493,medium,0.785,medium,520,medium
+pc_0533,"Given these constraints, choose the best approach and justify it: def f(items): return items[len(items)]",reasoning,0.622,medium,0.92,high,957,low
+pc_0534,Design a multi-region multi-region failover with eventual consistency.,system_design,0.942,hard,0.969,high,1281,low
+pc_0535,Design a scalable vector database for 100K requests per second.,system_design,0.767,hard,0.962,high,1034,low
+pc_0536,Compare invoice processing and binary search with tradeoffs.,reasoning,0.607,medium,0.929,high,932,low
+pc_0537,"Parse this invoice and return company, role, location.",extraction,0.373,medium,0.744,medium,382,high
+pc_0538,"Parse this invoice and return name, email, phone.",extraction,0.288,easy,0.788,medium,351,high
+pc_0539,Explain when to use Redis in production systems.,factual,0.488,medium,0.801,medium,567,medium
+pc_0540,Draft a professional message about Kubernetes autoscaling.,writing,0.21,easy,0.598,low,293,high
+pc_0541,Summarize pros and cons of Kafka.,summarization,0.319,easy,0.759,medium,319,high
+pc_0542,Write a JavaScript function to prompt caching.,coding,0.429,medium,0.811,medium,502,medium
+pc_0543,Design a multi-region release pipeline with low latency.,system_design,0.936,hard,0.97,high,1166,low
+pc_0544,Write a casual email to a recruiter about multi-region failover.,writing,0.395,medium,0.663,low,462,high
+pc_0545,"Given these constraints, choose the best approach and justify it: The model endpoint has variable latency and some requests need premium quality.",reasoning,0.728,hard,0.935,high,948,low
+pc_0546,Summarize this document into 7 bullet points: The model endpoint has variable latency and some requests need premium quality.,summarization,0.348,easy,0.72,medium,353,high
+pc_0547,"Find the bug in this TypeScript code and explain the fix: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.667,medium,0.9,high,666,low
+pc_0548,Create a short caption for RabbitMQ.,writing,0.074,easy,0.623,low,188,high
+pc_0549,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.668,medium,0.948,high,981,low
+pc_0550,Summarize this document into 3 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.336,easy,0.695,medium,478,high
+pc_0551,Explain release pipeline in simple terms.,factual,0.358,medium,0.815,medium,455,medium
+pc_0552,Compare Kubernetes autoscaling and vector database with tradeoffs.,reasoning,0.597,medium,0.906,high,866,low
+pc_0553,"Find the bug in this Java code and explain the fix: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.696,medium,0.942,high,652,low
+pc_0554,Analyze pros and cons of LLM inference router for a high-scale system.,reasoning,0.673,medium,0.915,high,1012,low
+pc_0555,"Parse this invoice and return company, role, location.",extraction,0.24,easy,0.765,medium,331,high
+pc_0556,Solve this math problem step by step: prompt caching.,math,0.726,hard,0.922,high,783,low
+pc_0557,Fix a incorrect retry behavior in this inference system.,debugging,0.671,medium,0.91,high,776,low
+pc_0558,"Extract key decisions from this meeting note: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",summarization,0.42,medium,0.698,medium,574,high
+pc_0559,Rewrite this message in a casual tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.241,easy,0.591,low,370,high
+pc_0560,Create an architecture for system reliability optimized for latency and cost.,system_design,0.742,hard,0.966,high,1034,low
+pc_0561,Create an executive summary of this multi-region failover document.,summarization,0.546,medium,0.694,medium,506,medium
+pc_0562,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.365,medium,0.694,medium,530,high
+pc_0563,Write a Python function to multi-region failover.,coding,0.647,medium,0.821,medium,584,medium
+pc_0564,Explain the failure modes of prompt caching.,reasoning,0.715,hard,0.934,high,985,low
+pc_0565,Write a Java function to system reliability.,coding,0.509,medium,0.844,medium,493,medium
+pc_0566,"Rewrite this message in a concise tone: The service receives bursty traffic, retries requests, and sometimes returns stale data.",writing,0.188,easy,0.636,low,189,high
+pc_0567,"Classify this support ticket and extract priority, owner, and due date: The team decided to ship next week but wants rollback guardrails and better monitoring.",extraction,0.254,easy,0.748,medium,256,high
+pc_0568,"Extract company, role, location from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.261,easy,0.771,medium,292,high
+pc_0569,Create a FastAPI endpoint that race condition.,coding,0.6,medium,0.833,medium,669,medium
+pc_0570,Analyze pros and cons of binary search for a high-scale system.,reasoning,0.581,medium,0.921,high,915,low
+pc_0571,"Generate unit tests for this TypeScript function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.551,medium,0.819,medium,633,medium
+pc_0572,"Generate unit tests for this TypeScript function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.515,medium,0.848,medium,589,medium
+pc_0573,Analyze pros and cons of birthday wish for a high-scale system.,reasoning,0.614,medium,0.924,high,959,low
+pc_0574,"Design rate limiting with observability, fallback, and autoscaling.",system_design,0.785,hard,0.97,high,1020,low
+pc_0575,Compare LLM inference router and URL shortener with tradeoffs.,reasoning,0.571,medium,0.928,high,937,low
+pc_0576,Debug this JavaScript code that fails with deadlock: The model endpoint has variable latency and some requests need premium quality.,debugging,0.837,hard,0.959,high,784,low
+pc_0577,Design a multi-region rate limiting with cost efficiency.,system_design,0.98,hard,0.97,high,1301,low
+pc_0578,Generate 5 viral reel ideas about customer apology.,creative,0.302,easy,0.631,low,405,medium
+pc_0579,Explain the failure modes of AI productivity.,reasoning,0.627,medium,0.878,high,987,medium
+pc_0580,"Extract name, email, phone from this text and return valid JSON: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.268,easy,0.774,medium,303,high
+pc_0581,Prove or disprove: invoice processing.,math,0.696,medium,0.922,high,811,low
+pc_0582,Write a Rust function to customer apology.,coding,0.5,medium,0.854,medium,554,medium
+pc_0583,Summarize this document into 3 bullet points: def f(items): return items[len(items)],summarization,0.347,easy,0.703,medium,345,high
+pc_0584,Brainstorm names for a product about real-time chat system.,creative,0.296,easy,0.623,low,307,medium
+pc_0585,Design a multi-region multi-region failover with high availability.,system_design,0.843,hard,0.966,high,1059,low
+pc_0586,Create a FastAPI endpoint that multi-region failover.,coding,0.558,medium,0.809,medium,592,medium
+pc_0587,"Design release pipeline with observability, fallback, and autoscaling.",system_design,0.865,hard,0.958,high,1112,low
+pc_0588,Explain when to use Kubernetes autoscaling in production systems.,factual,0.467,medium,0.759,medium,496,medium
+pc_0589,Extract entities from this paragraph: The model endpoint has variable latency and some requests need premium quality.,extraction,0.232,easy,0.784,medium,314,high
+pc_0590,Explain when to use system reliability in production systems.,factual,0.442,medium,0.797,medium,516,medium
+pc_0591,Draft a professional message about birthday wish.,writing,0.17,easy,0.6,low,310,high
+pc_0592,Debug this Rust code that fails with NullPointerException: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.655,medium,0.926,high,717,low
+pc_0593,Fix a race condition in this mobile release system.,debugging,0.764,hard,0.97,high,713,low
+pc_0594,Explain Kafka in simple terms.,factual,0.406,medium,0.773,medium,530,medium
+pc_0595,Give a concise overview of rate limiting.,factual,0.489,medium,0.771,medium,612,medium
+pc_0596,What is the difference between RabbitMQ and binary search?,factual,0.394,medium,0.778,medium,490,medium
+pc_0597,Extract entities from this paragraph: The team decided to ship next week but wants rollback guardrails and better monitoring.,extraction,0.231,easy,0.746,medium,288,high
+pc_0598,Analyze why this service has memory leak under load.,debugging,0.78,hard,0.917,high,728,low
+pc_0599,Compare distributed cache and system reliability with tradeoffs.,reasoning,0.743,hard,0.882,high,975,medium
+pc_0600,Prove or disprove: distributed cache.,math,0.726,hard,0.921,high,737,low
+pc_0601,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.628,medium,0.944,high,884,low
+pc_0602,Rewrite this message in a professional tone: CPU usage increases after every deployment and memory is not released after requests complete.,writing,0.26,easy,0.582,low,378,high
+pc_0603,"Given these constraints, choose the best approach and justify it: The model endpoint has variable latency and some requests need premium quality.",reasoning,0.662,medium,0.947,high,964,low
+pc_0604,Summarize this document into 7 bullet points: def f(items): return items[len(items)],summarization,0.398,medium,0.732,medium,430,high
+pc_0605,Create a FastAPI endpoint that system reliability.,coding,0.55,medium,0.798,medium,519,medium
+pc_0606,"Classify this support ticket and extract priority, owner, and due date: CPU usage increases after every deployment and memory is not released after requests complete.",extraction,0.243,easy,0.808,medium,343,high
+pc_0607,"Parse this invoice and return action items, owners, deadlines.",extraction,0.237,easy,0.787,medium,353,high
+pc_0608,Analyze pros and cons of rate limiting for a high-scale system.,reasoning,0.592,medium,0.912,high,909,low
+pc_0609,Analyze why this service has incorrect retry behavior under load.,debugging,0.701,hard,0.871,high,733,low
+pc_0610,"Design prompt caching with observability, fallback, and autoscaling.",system_design,0.754,hard,0.97,high,1026,low
+pc_0611,Implement retry with exponential backoff in C++.,coding,0.549,medium,0.832,medium,545,medium
+pc_0612,Explain rate limiting in simple terms.,factual,0.292,easy,0.813,medium,325,medium
+pc_0613,Calculate RabbitMQ and explain the reasoning.,math,0.69,medium,0.967,high,744,low
+pc_0614,"Classify this support ticket and extract priority, owner, and due date: The model endpoint has variable latency and some requests need premium quality.",extraction,0.314,easy,0.771,medium,446,high
+pc_0615,Create a short caption for invoice processing.,writing,0.123,easy,0.618,low,300,high
+pc_0616,Prove or disprove: binary search.,math,0.702,hard,0.902,high,786,low
+pc_0617,Debug this Python code that fails with segmentation fault: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.665,medium,0.899,high,617,low
+pc_0618,Rewrite this message in a persuasive tone: def f(items): return items[len(items)],writing,0.185,easy,0.61,low,361,high
+pc_0619,Summarize pros and cons of vector database.,summarization,0.279,easy,0.743,medium,446,high
+pc_0620,Solve this math problem step by step: Kubernetes autoscaling.,math,0.765,hard,0.97,high,799,low
+pc_0621,"Summarize this document into 10 bullet points: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",summarization,0.389,medium,0.689,medium,476,high
+pc_0622,Rewrite this message in a warm tone: def f(items): return items[len(items)],writing,0.259,easy,0.636,low,425,high
+pc_0623,"Generate unit tests for this Python function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.527,medium,0.801,medium,491,medium
+pc_0624,Draft a professional message about URL shortener.,writing,0.186,easy,0.606,low,190,high
+pc_0625,Calculate vector database and explain the reasoning.,math,0.635,medium,0.932,high,569,low
+pc_0626,"Find the bug in this JavaScript code and explain the fix: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.68,medium,0.898,high,656,low
+pc_0627,Design a scalable AI productivity for 100K requests per second.,system_design,0.788,hard,0.97,high,1084,low
+pc_0628,Create an executive summary of this rate limiting document.,summarization,0.315,easy,0.73,medium,323,high
+pc_0629,Write a friendly email to a recruiter about vector database.,writing,0.154,easy,0.622,low,301,high
+pc_0630,Write a Python function to distributed cache.,coding,0.582,medium,0.847,medium,630,medium
+pc_0631,Design a multi-region release pipeline with eventual consistency.,system_design,0.98,hard,0.969,high,1263,low
+pc_0632,"Extract entities from this paragraph: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.334,easy,0.75,medium,343,high
+pc_0633,Explain the failure modes of system reliability.,reasoning,0.574,medium,0.927,high,838,low
+pc_0634,Find the error in this derivation: The model endpoint has variable latency and some requests need premium quality.,math,0.686,medium,0.955,high,709,low
+pc_0635,Create a cinematic video prompt for Redis.,creative,0.262,easy,0.574,low,271,medium
+pc_0636,Fix a memory leak in this distributed system.,debugging,0.882,hard,0.961,high,895,low
+pc_0637,Create an executive summary of this URL shortener document.,summarization,0.215,easy,0.739,medium,244,high
+pc_0638,"Extract company, role, location from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.336,easy,0.815,medium,383,high
+pc_0639,Explain when to use rate limiting in production systems.,factual,0.398,medium,0.795,medium,551,medium
+pc_0640,Explain when to use prompt caching in production systems.,factual,0.47,medium,0.789,medium,538,medium
+pc_0641,"Classify this support ticket and extract priority, owner, and due date: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.238,easy,0.805,medium,341,high
+pc_0642,"Classify this support ticket and extract priority, owner, and due date: def f(items): return items[len(items)]",extraction,0.294,easy,0.804,medium,339,high
+pc_0643,Solve this math problem step by step: vector database.,math,0.833,hard,0.964,high,930,low
+pc_0644,"Generate unit tests for this Python function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.516,medium,0.827,medium,528,medium
+pc_0645,Solve this math problem step by step: multi-region failover.,math,0.793,hard,0.936,high,728,low
+pc_0646,"Generate unit tests for this Rust function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.556,medium,0.857,medium,533,medium
+pc_0647,Write a JavaScript function to release pipeline.,coding,0.536,medium,0.845,medium,622,medium
+pc_0648,Write a direct email to a recruiter about distributed cache.,writing,0.333,easy,0.57,low,394,high
+pc_0649,Summarize pros and cons of distributed cache.,summarization,0.405,medium,0.741,medium,555,high
+pc_0650,Create a short caption for multi-region failover.,writing,0.291,easy,0.575,low,303,high
+pc_0651,Implement LRU cache in JavaScript.,coding,0.482,medium,0.816,medium,597,medium
+pc_0652,Find the bug in this JavaScript code and explain the fix: def f(items): return items[len(items)],debugging,0.76,hard,0.97,high,737,low
+pc_0653,Draft a professional message about AI productivity.,writing,0.144,easy,0.6,low,282,high
+pc_0654,Write a Java function to rate limiting.,coding,0.505,medium,0.819,medium,569,medium
+pc_0655,"Summarize this document into 3 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.306,easy,0.73,medium,473,high
+pc_0656,Create a FastAPI endpoint that RabbitMQ.,coding,0.537,medium,0.788,medium,614,medium
+pc_0657,"Design RabbitMQ with observability, fallback, and autoscaling.",system_design,0.773,hard,0.964,high,1054,low
+pc_0658,Rewrite this message in a persuasive tone: The team decided to ship next week but wants rollback guardrails and better monitoring.,writing,0.278,easy,0.627,low,400,high
+pc_0659,Find the bug in this TypeScript code and explain the fix: def f(items): return items[len(items)],debugging,0.678,medium,0.871,high,696,low
+pc_0660,Give a concise overview of customer apology.,factual,0.409,medium,0.799,medium,487,medium
+pc_0661,Implement retry with exponential backoff in JavaScript.,coding,0.566,medium,0.808,medium,594,medium
+pc_0662,Create a FastAPI endpoint that Kafka.,coding,0.5,medium,0.835,medium,573,medium
+pc_0663,Design a multi-region vector database with strong consistency.,system_design,0.875,hard,0.97,high,1104,low
+pc_0664,Draft a professional message about race condition.,writing,0.393,medium,0.667,low,399,high
+pc_0665,Design a multi-region LLM inference router with high availability.,system_design,0.98,hard,0.958,high,1229,low
+pc_0666,Give a concise overview of race condition.,factual,0.504,medium,0.785,medium,618,medium
+pc_0667,Find the bug in this Rust code and explain the fix: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.695,medium,0.947,high,738,low
+pc_0668,Write a casual email to a manager about LLM inference router.,writing,0.26,easy,0.564,low,351,high
+pc_0669,Summarize pros and cons of invoice processing.,summarization,0.402,medium,0.725,medium,547,high
+pc_0670,Write a Rust function to birthday wish.,coding,0.441,medium,0.838,medium,405,medium
+pc_0671,Find the bug in this Java code and explain the fix: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.683,medium,0.944,high,686,low
+pc_0672,Create a FastAPI endpoint that system reliability.,coding,0.525,medium,0.794,medium,665,medium
+pc_0673,Design a multi-region Kubernetes autoscaling with high availability.,system_design,0.907,hard,0.97,high,1107,low
+pc_0674,Explain when to use memory leak in production systems.,factual,0.644,medium,0.777,medium,762,medium
+pc_0675,Fix a cache stampede in this backend system.,debugging,0.644,medium,0.922,high,721,low
+pc_0676,Create a FastAPI endpoint that Redis.,coding,0.568,medium,0.842,medium,647,medium
+pc_0677,What is the difference between prompt caching and prompt caching?,factual,0.387,medium,0.815,medium,479,medium
+pc_0678,What is the difference between distributed cache and URL shortener?,factual,0.422,medium,0.801,medium,543,medium
+pc_0679,Compare distributed cache and invoice processing with tradeoffs.,reasoning,0.722,hard,0.883,high,1078,medium
+pc_0680,"Extract invoice number, date, amount from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.25,easy,0.798,medium,428,high
+pc_0681,Explain the failure modes of prompt caching.,reasoning,0.63,medium,0.876,high,885,medium
+pc_0682,"Extract key decisions from this meeting note: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.41,medium,0.693,medium,451,high
+pc_0683,Rewrite this message in a casual tone: def f(items): return items[len(items)],writing,0.125,easy,0.587,low,202,high
+pc_0684,"Classify this support ticket and extract priority, owner, and due date: CPU usage increases after every deployment and memory is not released after requests complete.",extraction,0.377,medium,0.816,medium,503,high
+pc_0685,Design a scalable real-time chat system for 100K requests per second.,system_design,0.796,hard,0.97,high,1064,low
+pc_0686,Write a friendly email to a teammate about system reliability.,writing,0.188,easy,0.571,low,302,high
+pc_0687,"Extract key decisions from this meeting note: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.277,easy,0.744,medium,449,high
+pc_0688,"Extract name, email, phone from this text and return valid JSON: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.317,easy,0.778,medium,330,high
+pc_0689,Compare system reliability and Kafka with tradeoffs.,reasoning,0.609,medium,0.941,high,928,low
+pc_0690,Design a scalable race condition for enterprise customers.,system_design,0.86,hard,0.97,high,1096,low
+pc_0691,"Rewrite this message in a persuasive tone: The service receives bursty traffic, retries requests, and sometimes returns stale data.",writing,0.13,easy,0.628,low,238,high
+pc_0692,"Debug this TypeScript code that fails with deadlock: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.789,hard,0.953,high,789,low
+pc_0693,Create a short caption for prompt caching.,writing,0.192,easy,0.635,low,266,high
+pc_0694,Find the error in this derivation: def f(items): return items[len(items)],math,0.722,hard,0.897,high,706,low
+pc_0695,Create a cinematic video prompt for memory leak.,creative,0.389,medium,0.663,low,427,medium
+pc_0696,Extract entities from this paragraph: The team decided to ship next week but wants rollback guardrails and better monitoring.,extraction,0.37,medium,0.762,medium,500,high
+pc_0697,Prove or disprove: URL shortener.,math,0.618,medium,0.899,high,564,low
+pc_0698,Extract entities from this paragraph: The model endpoint has variable latency and some requests need premium quality.,extraction,0.335,easy,0.788,medium,403,high
+pc_0699,"Summarize this document into 5 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.338,easy,0.703,medium,323,high
+pc_0700,Give a concise overview of multi-region failover.,factual,0.507,medium,0.757,medium,540,medium
+pc_0701,Fix a race condition in this messaging system.,debugging,0.841,hard,0.969,high,881,low
+pc_0702,Design a scalable release pipeline for 100K requests per second.,system_design,0.848,hard,0.97,high,1109,low
+pc_0703,Fix a cache stampede in this backend system.,debugging,0.697,medium,0.888,high,729,low
+pc_0704,"Parse this invoice and return company, role, location.",extraction,0.301,easy,0.752,medium,411,high
+pc_0705,Analyze pros and cons of AI productivity for a high-scale system.,reasoning,0.703,hard,0.872,high,969,medium
+pc_0706,Rewrite this message in a concise tone: def f(items): return items[len(items)],writing,0.264,easy,0.632,low,405,high
+pc_0707,Compare LLM inference router and rate limiting with tradeoffs.,reasoning,0.599,medium,0.931,high,969,low
+pc_0708,Rewrite this message in a friendly tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.271,easy,0.568,low,336,high
+pc_0709,Fix a race condition in this distributed system.,debugging,0.881,hard,0.968,high,889,low
+pc_0710,Prove or disprove: binary search.,math,0.736,hard,0.963,high,810,low
+pc_0711,Generate 5 viral reel ideas about real-time chat system.,creative,0.353,medium,0.612,low,382,medium
+pc_0712,Explain when to use birthday wish in production systems.,factual,0.304,easy,0.751,medium,359,medium
+pc_0713,Design a scalable RabbitMQ for 10M users.,system_design,0.83,hard,0.97,high,1044,low
+pc_0714,Write a Java function to binary search.,coding,0.495,medium,0.819,medium,497,medium
+pc_0715,"Design Kafka with observability, fallback, and autoscaling.",system_design,0.748,hard,0.943,high,1033,low
+pc_0716,Explain the failure modes of RabbitMQ.,reasoning,0.633,medium,0.899,high,990,medium
+pc_0717,Explain Kubernetes autoscaling in simple terms.,factual,0.308,easy,0.796,medium,471,medium
+pc_0718,Summarize pros and cons of vector database.,summarization,0.393,medium,0.701,medium,445,high
+pc_0719,Create a FastAPI endpoint that race condition.,coding,0.612,medium,0.798,medium,591,medium
+pc_0720,Calculate vector database and explain the reasoning.,math,0.693,medium,0.934,high,785,low
+pc_0721,Rewrite this message in a direct tone: CPU usage increases after every deployment and memory is not released after requests complete.,writing,0.237,easy,0.635,low,240,high
+pc_0722,Write a concise email to a manager about customer apology.,writing,0.24,easy,0.625,low,329,high
+pc_0723,Explain the failure modes of LLM inference router.,reasoning,0.664,medium,0.901,high,1049,low
+pc_0724,Give a concise overview of AI productivity.,factual,0.439,medium,0.758,medium,506,medium
+pc_0725,Prove or disprove: system reliability.,math,0.726,hard,0.968,high,747,low
+pc_0726,Write a short script for a warm video about customer apology.,creative,0.278,easy,0.599,low,329,medium
+pc_0727,Rewrite this message in a warm tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.126,easy,0.615,low,289,high
+pc_0728,Write a JavaScript function to system reliability.,coding,0.509,medium,0.839,medium,649,medium
+pc_0729,Write a warm email to a recruiter about memory leak.,writing,0.267,easy,0.624,low,381,high
+pc_0730,Summarize pros and cons of Kubernetes autoscaling.,summarization,0.316,easy,0.735,medium,455,high
+pc_0731,Create an architecture for Redis optimized for latency and cost.,system_design,0.771,hard,0.964,high,1105,low
+pc_0732,Write a direct email to a teammate about Kafka.,writing,0.176,easy,0.605,low,236,high
+pc_0733,Write a Rust function to Kubernetes autoscaling.,coding,0.515,medium,0.788,medium,522,medium
+pc_0734,What is the difference between distributed cache and real-time chat system?,factual,0.635,medium,0.757,medium,570,medium
+pc_0735,"Parse this invoice and return name, email, phone.",extraction,0.326,easy,0.766,medium,435,high
+pc_0736,Generate 10 viral reel ideas about memory leak.,creative,0.493,medium,0.686,low,519,medium
+pc_0737,Design a multi-region system reliability with cost efficiency.,system_design,0.977,hard,0.97,high,1248,low
+pc_0738,"Design system reliability with observability, fallback, and autoscaling.",system_design,0.721,hard,0.935,high,966,low
+pc_0739,"Generate unit tests for this TypeScript function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.429,medium,0.826,medium,401,medium
+pc_0740,"Design customer apology with observability, fallback, and autoscaling.",system_design,0.733,hard,0.97,high,983,low
+pc_0741,Draft a professional message about binary search.,writing,0.147,easy,0.639,low,339,high
+pc_0742,Write a JavaScript function to race condition.,coding,0.637,medium,0.835,medium,675,medium
+pc_0743,"Extract action items, owners, deadlines from this text and return valid JSON: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.367,medium,0.755,medium,363,high
+pc_0744,"Classify this support ticket and extract priority, owner, and due date: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.341,easy,0.751,medium,332,high
+pc_0745,Generate unit tests for this Java function: def f(items): return items[len(items)],coding,0.49,medium,0.787,medium,536,medium
+pc_0746,"Given these constraints, choose the best approach and justify it: The model endpoint has variable latency and some requests need premium quality.",reasoning,0.639,medium,0.922,high,1047,low
+pc_0747,What is the difference between system reliability and Redis?,factual,0.471,medium,0.778,medium,549,medium
+pc_0748,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.624,medium,0.942,high,907,low
+pc_0749,"Generate unit tests for this Rust function: The service receives bursty traffic, retries requests, and sometimes returns stale data.",coding,0.553,medium,0.8,medium,595,medium
+pc_0750,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.652,medium,0.944,high,1036,low
+pc_0751,Design a multi-region real-time chat system with strong consistency.,system_design,0.945,hard,0.966,high,1177,low
+pc_0752,Give a concise overview of RabbitMQ.,factual,0.425,medium,0.778,medium,566,medium
+pc_0753,Implement LRU cache in C++.,coding,0.483,medium,0.786,medium,565,medium
+pc_0754,Compare URL shortener and RabbitMQ with tradeoffs.,reasoning,0.527,medium,0.91,high,788,low
+pc_0755,"Classify this support ticket and extract priority, owner, and due date: The model endpoint has variable latency and some requests need premium quality.",extraction,0.262,easy,0.816,medium,297,high
+pc_0756,Summarize pros and cons of distributed cache.,summarization,0.471,medium,0.735,medium,432,medium
+pc_0757,Analyze why this service has incorrect retry behavior under load.,debugging,0.638,medium,0.884,high,680,low
+pc_0758,Find the error in this derivation: def f(items): return items[len(items)],math,0.615,medium,0.9,high,677,low
+pc_0759,Fix a race condition in this mobile release system.,debugging,0.743,hard,0.896,high,823,low
+pc_0760,Write a direct email to a recruiter about system reliability.,writing,0.263,easy,0.588,low,370,high
+pc_0761,Design a multi-region prompt caching with high availability.,system_design,0.922,hard,0.97,high,1199,low
+pc_0762,"Given these constraints, choose the best approach and justify it: The model endpoint has variable latency and some requests need premium quality.",reasoning,0.652,medium,0.938,high,946,low
+pc_0763,Design a scalable customer apology for multi-region deployment.,system_design,0.949,hard,0.97,high,1240,low
+pc_0764,"Extract company, role, location from this text and return valid JSON: def f(items): return items[len(items)]",extraction,0.23,easy,0.763,medium,407,high
+pc_0765,Explain the failure modes of multi-region failover.,reasoning,0.714,hard,0.938,high,1064,low
+pc_0766,"Parse this invoice and return action items, owners, deadlines.",extraction,0.269,easy,0.8,medium,373,high
+pc_0767,"Design vector database with observability, fallback, and autoscaling.",system_design,0.78,hard,0.97,high,1089,low
+pc_0768,Compare Kafka and Kafka with tradeoffs.,reasoning,0.637,medium,0.918,high,952,low
+pc_0769,Create a cinematic video prompt for multi-region failover.,creative,0.404,medium,0.61,low,458,medium
+pc_0770,Brainstorm names for a product about distributed cache.,creative,0.438,medium,0.65,low,421,medium
+pc_0771,Explain the failure modes of vector database.,reasoning,0.652,medium,0.885,high,925,medium
+pc_0772,Fix a memory leak in this distributed system.,debugging,0.813,hard,0.965,high,834,low
+pc_0773,"Parse this invoice and return invoice number, date, amount.",extraction,0.328,easy,0.809,medium,429,high
+pc_0774,Write a TypeScript function to Redis.,coding,0.484,medium,0.854,medium,602,medium
+pc_0775,Explain the failure modes of distributed cache.,reasoning,0.724,hard,0.878,high,1109,medium
+pc_0776,Design a scalable RabbitMQ for 100K requests per second.,system_design,0.726,hard,0.921,high,1079,low
+pc_0777,Explain prompt caching in simple terms.,factual,0.36,medium,0.764,medium,526,medium
+pc_0778,Design a multi-region Kubernetes autoscaling with cost efficiency.,system_design,0.898,hard,0.97,high,1225,low
+pc_0779,Create a FastAPI endpoint that rate limiting.,coding,0.497,medium,0.81,medium,623,medium
+pc_0780,Create a short caption for Kafka.,writing,0.185,easy,0.627,low,387,high
+pc_0781,Calculate rate limiting and explain the reasoning.,math,0.725,hard,0.894,high,791,low
+pc_0782,Calculate URL shortener and explain the reasoning.,math,0.609,medium,0.949,high,563,low
+pc_0783,Extract key decisions from this meeting note: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.347,easy,0.715,medium,445,high
+pc_0784,"Extract name, email, phone from this text and return valid JSON: The team decided to ship next week but wants rollback guardrails and better monitoring.",extraction,0.349,easy,0.789,medium,442,high
+pc_0785,Create a short caption for vector database.,writing,0.179,easy,0.58,low,251,high
+pc_0786,Create an architecture for distributed cache optimized for latency and cost.,system_design,0.948,hard,0.958,high,1248,low
+pc_0787,Implement topological sort in Rust.,coding,0.511,medium,0.792,medium,504,medium
+pc_0788,Extract entities from this paragraph: The model endpoint has variable latency and some requests need premium quality.,extraction,0.369,medium,0.778,medium,420,high
+pc_0789,Implement topological sort in Rust.,coding,0.477,medium,0.844,medium,551,medium
+pc_0790,Create a cinematic video prompt for Kafka.,creative,0.252,easy,0.577,low,372,medium
+pc_0791,Fix a incorrect retry behavior in this inference system.,debugging,0.665,medium,0.919,high,691,low
+pc_0792,Write a friendly email to a customer about Redis.,writing,0.186,easy,0.572,low,226,high
+pc_0793,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.68,medium,0.881,high,1105,medium
+pc_0794,Create a short caption for invoice processing.,writing,0.137,easy,0.635,low,181,high
+pc_0795,Summarize pros and cons of customer apology.,summarization,0.349,easy,0.726,medium,488,high
+pc_0796,Write a concise email to a recruiter about system reliability.,writing,0.189,easy,0.582,low,305,high
+pc_0797,Design a multi-region LLM inference router with eventual consistency.,system_design,0.887,hard,0.97,high,1182,low
+pc_0798,Write a professional email to a customer about race condition.,writing,0.383,medium,0.667,low,502,high
+pc_0799,Create an executive summary of this Kafka document.,summarization,0.322,easy,0.705,medium,362,high
+pc_0800,Analyze pros and cons of URL shortener for a high-scale system.,reasoning,0.561,medium,0.93,high,995,low
+pc_0801,"Extract entities from this paragraph: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",extraction,0.303,easy,0.753,medium,340,high
+pc_0802,Summarize pros and cons of rate limiting.,summarization,0.421,medium,0.681,medium,485,high
+pc_0803,Create a FastAPI endpoint that rate limiting.,coding,0.423,medium,0.857,medium,575,medium
+pc_0804,"Given these constraints, choose the best approach and justify it: CPU usage increases after every deployment and memory is not released after requests complete.",reasoning,0.665,medium,0.887,high,1084,medium
+pc_0805,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.696,medium,0.872,high,973,medium
+pc_0806,Explain when to use Redis in production systems.,factual,0.377,medium,0.77,medium,503,medium
+pc_0807,Design a multi-region AI productivity with high availability.,system_design,0.862,hard,0.97,high,1225,low
+pc_0808,Create a short caption for Redis.,writing,0.122,easy,0.624,low,170,high
+pc_0809,"Extract invoice number, date, amount from this text and return valid JSON: CPU usage increases after every deployment and memory is not released after requests complete.",extraction,0.334,easy,0.777,medium,464,high
+pc_0810,Prove or disprove: binary search.,math,0.713,hard,0.893,high,695,low
+pc_0811,Summarize pros and cons of prompt caching.,summarization,0.312,easy,0.715,medium,485,high
+pc_0812,Give a concise overview of Redis.,factual,0.473,medium,0.817,medium,463,medium
+pc_0813,Create an executive summary of this distributed cache document.,summarization,0.419,medium,0.746,medium,516,high
+pc_0814,"Parse this invoice and return invoice number, date, amount.",extraction,0.257,easy,0.816,medium,383,high
+pc_0815,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.317,easy,0.752,medium,406,high
+pc_0816,Analyze why this service has cache stampede under load.,debugging,0.642,medium,0.908,high,617,low
+pc_0817,Write a short script for a warm video about multi-region failover.,creative,0.376,medium,0.657,low,521,medium
+pc_0818,Create an executive summary of this Redis document.,summarization,0.34,easy,0.746,medium,457,high
+pc_0819,"Design binary search with observability, fallback, and autoscaling.",system_design,0.831,hard,0.97,high,1230,low
+pc_0820,What is the difference between LLM inference router and vector database?,factual,0.387,medium,0.802,medium,543,medium
+pc_0821,Create an architecture for binary search optimized for latency and cost.,system_design,0.799,hard,0.97,high,1179,low
+pc_0822,Explain system reliability in simple terms.,factual,0.305,easy,0.817,medium,350,medium
+pc_0823,Create a FastAPI endpoint that release pipeline.,coding,0.565,medium,0.797,medium,556,medium
+pc_0824,Create a short caption for race condition.,writing,0.285,easy,0.586,low,450,high
+pc_0825,"Given these constraints, choose the best approach and justify it: CPU usage increases after every deployment and memory is not released after requests complete.",reasoning,0.656,medium,0.934,high,945,low
+pc_0826,Give a concise overview of multi-region failover.,factual,0.619,medium,0.812,medium,749,medium
+pc_0827,Create an executive summary of this distributed cache document.,summarization,0.405,medium,0.737,medium,543,high
+pc_0828,Generate unit tests for this Python function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.58,medium,0.815,medium,532,medium
+pc_0829,"Parse this invoice and return invoice number, date, amount.",extraction,0.259,easy,0.742,medium,406,high
+pc_0830,Analyze why this service has incorrect retry behavior under load.,debugging,0.662,medium,0.934,high,685,low
+pc_0831,Explain when to use RabbitMQ in production systems.,factual,0.391,medium,0.818,medium,562,medium
+pc_0832,Analyze why this service has memory leak under load.,debugging,0.82,hard,0.945,high,769,low
+pc_0833,Draft a professional message about rate limiting.,writing,0.272,easy,0.618,low,442,high
+pc_0834,Explain the failure modes of memory leak.,reasoning,0.818,hard,0.951,high,1129,low
+pc_0835,Extract key decisions from this meeting note: The model endpoint has variable latency and some requests need premium quality.,summarization,0.301,easy,0.758,medium,483,high
+pc_0836,Write a short script for a casual video about AI productivity.,creative,0.201,easy,0.598,low,287,medium
+pc_0837,"Extract name, email, phone from this text and return valid JSON: def f(items): return items[len(items)]",extraction,0.321,easy,0.767,medium,495,high
+pc_0838,"Extract key decisions from this meeting note: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.319,easy,0.744,medium,446,high
+pc_0839,Prove or disprove: URL shortener.,math,0.67,medium,0.904,high,711,low
+pc_0840,Design a multi-region invoice processing with eventual consistency.,system_design,0.923,hard,0.97,high,1241,low
+pc_0841,"Parse this invoice and return name, email, phone.",extraction,0.258,easy,0.805,medium,297,high
+pc_0842,Write a Rust function to customer apology.,coding,0.541,medium,0.831,medium,561,medium
+pc_0843,What is the difference between Kubernetes autoscaling and multi-region failover?,factual,0.58,medium,0.789,medium,600,medium
+pc_0844,Fix a cache stampede in this distributed system.,debugging,0.748,hard,0.872,high,742,low
+pc_0845,Implement retry with exponential backoff in JavaScript.,coding,0.563,medium,0.837,medium,526,medium
+pc_0846,Design a multi-region prompt caching with low latency.,system_design,0.946,hard,0.97,high,1217,low
+pc_0847,"Extract entities from this paragraph: The service receives bursty traffic, retries requests, and sometimes returns stale data.",extraction,0.311,easy,0.809,medium,454,high
+pc_0848,What is the difference between race condition and AI productivity?,factual,0.601,medium,0.743,medium,736,medium
+pc_0849,"Find the bug in this TypeScript code and explain the fix: The service receives bursty traffic, retries requests, and sometimes returns stale data.",debugging,0.661,medium,0.924,high,768,low
+pc_0850,Generate unit tests for this TypeScript function: def f(items): return items[len(items)],coding,0.503,medium,0.783,medium,579,medium
+pc_0851,"Summarize this document into 3 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.366,medium,0.683,medium,468,high
+pc_0852,Write a short script for a casual video about binary search.,creative,0.149,easy,0.59,low,230,medium
+pc_0853,Debug this TypeScript code that fails with NullPointerException: def f(items): return items[len(items)],debugging,0.646,medium,0.914,high,659,low
+pc_0854,Write a persuasive email to a recruiter about race condition.,writing,0.277,easy,0.59,low,409,high
+pc_0855,Draft a professional message about distributed cache.,writing,0.35,easy,0.591,low,518,high
+pc_0856,Extract entities from this paragraph: The team decided to ship next week but wants rollback guardrails and better monitoring.,extraction,0.337,easy,0.817,medium,415,high
+pc_0857,What is the difference between race condition and Kubernetes autoscaling?,factual,0.546,medium,0.815,medium,601,medium
+pc_0858,Create a FastAPI endpoint that invoice processing.,coding,0.459,medium,0.837,medium,565,medium
+pc_0859,"Classify this support ticket and extract priority, owner, and due date: The model endpoint has variable latency and some requests need premium quality.",extraction,0.365,medium,0.816,medium,499,high
+pc_0860,Write a Java function to binary search.,coding,0.527,medium,0.802,medium,667,medium
+pc_0861,Design a multi-region prompt caching with eventual consistency.,system_design,0.98,hard,0.97,high,1351,low
+pc_0862,Compare LLM inference router and LLM inference router with tradeoffs.,reasoning,0.619,medium,0.875,high,1015,medium
+pc_0863,Explain when to use URL shortener in production systems.,factual,0.315,easy,0.784,medium,418,medium
+pc_0864,Create an architecture for distributed cache optimized for latency and cost.,system_design,0.934,hard,0.97,high,1215,low
+pc_0865,Find the bug in this C++ code and explain the fix: def f(items): return items[len(items)],debugging,0.683,medium,0.882,high,781,low
+pc_0866,"Classify this support ticket and extract priority, owner, and due date: The team decided to ship next week but wants rollback guardrails and better monitoring.",extraction,0.365,medium,0.742,medium,420,high
+pc_0867,Summarize this document into 10 bullet points: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.358,medium,0.69,medium,493,high
+pc_0868,Write a direct email to a manager about Kafka.,writing,0.249,easy,0.628,low,441,high
+pc_0869,Create a FastAPI endpoint that real-time chat system.,coding,0.566,medium,0.849,medium,540,medium
+pc_0870,"Rewrite this message in a casual tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.122,easy,0.625,low,291,high
+pc_0871,Rewrite this message in a concise tone: The model endpoint has variable latency and some requests need premium quality.,writing,0.135,easy,0.636,low,144,high
+pc_0872,Implement retry with exponential backoff in Java.,coding,0.466,medium,0.834,medium,441,medium
+pc_0873,"Find the bug in this Rust code and explain the fix: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.65,medium,0.896,high,640,low
+pc_0874,Summarize pros and cons of Kubernetes autoscaling.,summarization,0.375,medium,0.757,medium,412,high
+pc_0875,What is the difference between LLM inference router and customer apology?,factual,0.464,medium,0.813,medium,516,medium
+pc_0876,Design a scalable binary search for global traffic.,system_design,0.814,hard,0.953,high,1111,low
+pc_0877,Create a FastAPI endpoint that memory leak.,coding,0.601,medium,0.85,medium,578,medium
+pc_0878,Generate unit tests for this Python function: CPU usage increases after every deployment and memory is not released after requests complete.,coding,0.452,medium,0.82,medium,453,medium
+pc_0879,Give a concise overview of customer apology.,factual,0.381,medium,0.766,medium,475,medium
+pc_0880,"Given these constraints, choose the best approach and justify it: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",reasoning,0.669,medium,0.919,high,1051,low
+pc_0881,Extract key decisions from this meeting note: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.38,medium,0.753,medium,433,high
+pc_0882,Explain the failure modes of system reliability.,reasoning,0.608,medium,0.936,high,971,low
+pc_0883,Find the error in this derivation: The team decided to ship next week but wants rollback guardrails and better monitoring.,math,0.642,medium,0.952,high,772,low
+pc_0884,What is the difference between customer apology and RabbitMQ?,factual,0.448,medium,0.765,medium,547,medium
+pc_0885,"Parse this invoice and return invoice number, date, amount.",extraction,0.351,medium,0.741,medium,394,high
+pc_0886,"Parse this invoice and return name, email, phone.",extraction,0.245,easy,0.776,medium,318,high
+pc_0887,Extract key decisions from this meeting note: The team decided to ship next week but wants rollback guardrails and better monitoring.,summarization,0.358,medium,0.71,medium,414,high
+pc_0888,"Design multi-region failover with observability, fallback, and autoscaling.",system_design,0.93,hard,0.97,high,1250,low
+pc_0889,"Rewrite this message in a warm tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.186,easy,0.62,low,314,high
+pc_0890,Write a Java function to multi-region failover.,coding,0.549,medium,0.835,medium,502,medium
+pc_0891,"Rewrite this message in a warm tone: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",writing,0.202,easy,0.583,low,207,high
+pc_0892,Explain the failure modes of release pipeline.,reasoning,0.711,hard,0.911,high,976,low
+pc_0893,Implement rate limiter in Rust.,coding,0.461,medium,0.796,medium,487,medium
+pc_0894,Write a Java function to invoice processing.,coding,0.542,medium,0.839,medium,566,medium
+pc_0895,Design a multi-region rate limiting with low latency.,system_design,0.978,hard,0.967,high,1345,low
+pc_0896,Generate unit tests for this JavaScript function: The team decided to ship next week but wants rollback guardrails and better monitoring.,coding,0.519,medium,0.849,medium,541,medium
+pc_0897,Create a short caption for prompt caching.,writing,0.085,easy,0.612,low,178,high
+pc_0898,Generate 5 viral reel ideas about real-time chat system.,creative,0.238,easy,0.618,low,348,medium
+pc_0899,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.639,medium,0.907,high,917,low
+pc_0900,Write a persuasive email to a recruiter about Redis.,writing,0.192,easy,0.56,low,358,high
+pc_0901,Draft a professional message about RabbitMQ.,writing,0.225,easy,0.59,low,362,high
+pc_0902,Calculate race condition and explain the reasoning.,math,0.777,hard,0.959,high,800,low
+pc_0903,Create a short caption for rate limiting.,writing,0.126,easy,0.627,low,177,high
+pc_0904,Calculate memory leak and explain the reasoning.,math,0.841,hard,0.97,high,919,low
+pc_0905,Create an architecture for binary search optimized for latency and cost.,system_design,0.822,hard,0.97,high,1206,low
+pc_0906,Write a short script for a persuasive video about birthday wish.,creative,0.242,easy,0.636,low,283,medium
+pc_0907,Write a friendly email to a customer about distributed cache.,writing,0.352,medium,0.634,low,427,high
+pc_0908,Implement topological sort in Python.,coding,0.496,medium,0.844,medium,643,medium
+pc_0909,Solve this math problem step by step: vector database.,math,0.705,hard,0.91,high,812,low
+pc_0910,Compare binary search and RabbitMQ with tradeoffs.,reasoning,0.636,medium,0.871,high,902,medium
+pc_0911,Compare LLM inference router and birthday wish with tradeoffs.,reasoning,0.584,medium,0.926,high,951,low
+pc_0912,Extract entities from this paragraph: CPU usage increases after every deployment and memory is not released after requests complete.,extraction,0.26,easy,0.771,medium,440,high
+pc_0913,Analyze pros and cons of release pipeline for a high-scale system.,reasoning,0.722,hard,0.879,high,985,medium
+pc_0914,Create an executive summary of this prompt caching document.,summarization,0.357,medium,0.713,medium,341,high
+pc_0915,Explain when to use LLM inference router in production systems.,factual,0.396,medium,0.786,medium,536,medium
+pc_0916,Extract entities from this paragraph: def f(items): return items[len(items)],extraction,0.257,easy,0.752,medium,282,high
+pc_0917,"Design release pipeline with observability, fallback, and autoscaling.",system_design,0.858,hard,0.97,high,1107,low
+pc_0918,Explain the failure modes of Kafka.,reasoning,0.652,medium,0.949,high,1028,low
+pc_0919,Create an executive summary of this multi-region failover document.,summarization,0.497,medium,0.754,medium,552,medium
+pc_0920,Find the bug in this Java code and explain the fix: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.716,hard,0.903,high,781,low
+pc_0921,Rewrite this message in a casual tone: The team decided to ship next week but wants rollback guardrails and better monitoring.,writing,0.257,easy,0.598,low,372,high
+pc_0922,Implement rate limiter in JavaScript.,coding,0.47,medium,0.852,medium,490,medium
+pc_0923,Calculate Kafka and explain the reasoning.,math,0.712,hard,0.901,high,832,low
+pc_0924,Create an architecture for system reliability optimized for latency and cost.,system_design,0.76,hard,0.97,high,1137,low
+pc_0925,Implement topological sort in Rust.,coding,0.432,medium,0.79,medium,492,medium
+pc_0926,Find the error in this derivation: The team decided to ship next week but wants rollback guardrails and better monitoring.,math,0.67,medium,0.929,high,626,low
+pc_0927,Analyze why this service has deadlock under load.,debugging,0.783,hard,0.97,high,885,low
+pc_0928,"Design prompt caching with observability, fallback, and autoscaling.",system_design,0.755,hard,0.97,high,1163,low
+pc_0929,Give a concise overview of real-time chat system.,factual,0.385,medium,0.799,medium,425,medium
+pc_0930,"Debug this Java code that fails with segmentation fault: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",debugging,0.669,medium,0.916,high,751,low
+pc_0931,Create a FastAPI endpoint that distributed cache.,coding,0.662,medium,0.796,medium,765,medium
+pc_0932,Analyze why this service has deadlock under load.,debugging,0.874,hard,0.965,high,815,low
+pc_0933,Implement topological sort in Java.,coding,0.523,medium,0.785,medium,656,medium
+pc_0934,Draft a professional message about rate limiting.,writing,0.157,easy,0.589,low,229,high
+pc_0935,Find the bug in this TypeScript code and explain the fix: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.718,hard,0.914,high,704,low
+pc_0936,Create a short caption for Kubernetes autoscaling.,writing,0.179,easy,0.61,low,328,high
+pc_0937,Analyze pros and cons of customer apology for a high-scale system.,reasoning,0.701,hard,0.884,high,956,medium
+pc_0938,Brainstorm names for a product about URL shortener.,creative,0.221,easy,0.565,low,251,medium
+pc_0939,Summarize this document into 7 bullet points: CPU usage increases after every deployment and memory is not released after requests complete.,summarization,0.31,easy,0.731,medium,486,high
+pc_0940,Write a warm email to a teammate about AI productivity.,writing,0.271,easy,0.588,low,415,high
+pc_0941,"Find the error in this derivation: User John Doe, john@example.com, +1 555 0100, requested cancellation by Friday.",math,0.667,medium,0.923,high,692,low
+pc_0942,Give a concise overview of customer apology.,factual,0.497,medium,0.772,medium,488,medium
+pc_0943,Rewrite this message in a warm tone: The team decided to ship next week but wants rollback guardrails and better monitoring.,writing,0.264,easy,0.634,low,328,high
+pc_0944,Write a C++ function to memory leak.,coding,0.596,medium,0.795,medium,665,medium
+pc_0945,"Summarize this document into 3 bullet points: The service receives bursty traffic, retries requests, and sometimes returns stale data.",summarization,0.398,medium,0.717,medium,527,high
+pc_0946,Give a concise overview of birthday wish.,factual,0.301,easy,0.817,medium,381,medium
+pc_0947,Create a FastAPI endpoint that real-time chat system.,coding,0.573,medium,0.796,medium,661,medium
+pc_0948,Extract entities from this paragraph: CPU usage increases after every deployment and memory is not released after requests complete.,extraction,0.255,easy,0.813,medium,288,high
+pc_0949,"Design invoice processing with observability, fallback, and autoscaling.",system_design,0.826,hard,0.97,high,1202,low
+pc_0950,Create an architecture for RabbitMQ optimized for latency and cost.,system_design,0.872,hard,0.97,high,1136,low
+pc_0951,Create an executive summary of this RabbitMQ document.,summarization,0.361,medium,0.704,medium,398,high
+pc_0952,Summarize pros and cons of binary search.,summarization,0.319,easy,0.719,medium,426,high
+pc_0953,Implement sliding window in Java.,coding,0.433,medium,0.844,medium,400,medium
+pc_0954,Summarize pros and cons of multi-region failover.,summarization,0.482,medium,0.683,medium,518,medium
+pc_0955,Write a Java function to LLM inference router.,coding,0.518,medium,0.822,medium,626,medium
+pc_0956,What is the difference between vector database and Redis?,factual,0.476,medium,0.796,medium,549,medium
+pc_0957,Generate unit tests for this Java function: def f(items): return items[len(items)],coding,0.429,medium,0.85,medium,431,medium
+pc_0958,Summarize pros and cons of LLM inference router.,summarization,0.364,medium,0.755,medium,392,high
+pc_0959,Debug this Python code that fails with timeout: def f(items): return items[len(items)],debugging,0.775,hard,0.97,high,770,low
+pc_0960,Find the bug in this Java code and explain the fix: CPU usage increases after every deployment and memory is not released after requests complete.,debugging,0.627,medium,0.881,high,693,low
+pc_0961,Explain the failure modes of URL shortener.,reasoning,0.567,medium,0.936,high,940,low
+pc_0962,"Parse this invoice and return invoice number, date, amount.",extraction,0.266,easy,0.82,medium,372,high
+pc_0963,Create a short caption for race condition.,writing,0.196,easy,0.581,low,362,high
+pc_0964,Rewrite this message in a persuasive tone: def f(items): return items[len(items)],writing,0.128,easy,0.566,low,208,high
+pc_0965,Find the error in this derivation: CPU usage increases after every deployment and memory is not released after requests complete.,math,0.707,hard,0.964,high,729,low
+pc_0966,Prove or disprove: multi-region failover.,math,0.839,hard,0.97,high,786,low
+pc_0967,"Given these constraints, choose the best approach and justify it: The team decided to ship next week but wants rollback guardrails and better monitoring.",reasoning,0.581,medium,0.949,high,854,low
+pc_0968,Rewrite this message in a friendly tone: The team decided to ship next week but wants rollback guardrails and better monitoring.,writing,0.218,easy,0.623,low,306,high
+pc_0969,Create a short caption for Kafka.,writing,0.126,easy,0.598,low,329,high
+pc_0970,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.682,medium,0.948,high,1099,low
+pc_0971,Extract entities from this paragraph: The model endpoint has variable latency and some requests need premium quality.,extraction,0.223,easy,0.793,medium,314,high
+pc_0972,"Given these constraints, choose the best approach and justify it: The service receives bursty traffic, retries requests, and sometimes returns stale data.",reasoning,0.649,medium,0.95,high,1066,low
+pc_0973,Create a cinematic video prompt for release pipeline.,creative,0.326,easy,0.64,low,485,medium
+pc_0974,Explain when to use binary search in production systems.,factual,0.527,medium,0.766,medium,659,medium
+pc_0975,Rewrite this message in a concise tone: def f(items): return items[len(items)],writing,0.213,easy,0.566,low,223,high
+pc_0976,Give a concise overview of system reliability.,factual,0.423,medium,0.799,medium,424,medium
+pc_0977,Write a concise email to a recruiter about distributed cache.,writing,0.383,medium,0.63,low,440,high
+pc_0978,Create an executive summary of this distributed cache document.,summarization,0.548,medium,0.68,medium,629,medium
+pc_0979,What is the difference between RabbitMQ and release pipeline?,factual,0.436,medium,0.786,medium,468,medium
+pc_0980,"Extract name, email, phone from this text and return valid JSON: CPU usage increases after every deployment and memory is not released after requests complete.",extraction,0.241,easy,0.755,medium,398,high
+pc_0981,Compare real-time chat system and release pipeline with tradeoffs.,reasoning,0.724,hard,0.916,high,1110,low
+pc_0982,"Extract action items, owners, deadlines from this text and return valid JSON: def f(items): return items[len(items)]",extraction,0.376,medium,0.77,medium,481,high
+pc_0983,Create an architecture for multi-region failover optimized for latency and cost.,system_design,0.91,hard,0.97,high,1213,low
+pc_0984,Find the bug in this Python code and explain the fix: def f(items): return items[len(items)],debugging,0.743,hard,0.908,high,856,low
+pc_0985,Solve this math problem step by step: rate limiting.,math,0.767,hard,0.965,high,715,low
+pc_0986,Rewrite this message in a persuasive tone: CPU usage increases after every deployment and memory is not released after requests complete.,writing,0.258,easy,0.601,low,328,high
+pc_0987,"Design prompt caching with observability, fallback, and autoscaling.",system_design,0.82,hard,0.97,high,1027,low
+pc_0988,Summarize this document into 3 bullet points: def f(items): return items[len(items)],summarization,0.381,medium,0.702,medium,405,high
+pc_0989,Explain the failure modes of prompt caching.,reasoning,0.627,medium,0.931,high,999,low
+pc_0990,Create a FastAPI endpoint that system reliability.,coding,0.486,medium,0.86,medium,461,medium
+pc_0991,Summarize pros and cons of RabbitMQ.,summarization,0.373,medium,0.751,medium,399,high
+pc_0992,Create a short caption for distributed cache.,writing,0.291,easy,0.577,low,382,high
+pc_0993,Write a TypeScript function to prompt caching.,coding,0.446,medium,0.839,medium,569,medium
+pc_0994,Solve this math problem step by step: Kafka.,math,0.764,hard,0.97,high,736,low
+pc_0995,Analyze pros and cons of Kafka for a high-scale system.,reasoning,0.597,medium,0.873,high,881,medium
+pc_0996,"Design URL shortener with observability, fallback, and autoscaling.",system_design,0.723,hard,0.954,high,1117,low
+pc_0997,Prove or disprove: vector database.,math,0.787,hard,0.97,high,895,low
+pc_0998,Rewrite this message in a warm tone: The team decided to ship next week but wants rollback guardrails and better monitoring.,writing,0.21,easy,0.592,low,374,high
+pc_0999,Analyze pros and cons of URL shortener for a high-scale system.,reasoning,0.578,medium,0.897,high,958,medium
+pc_1000,Create a short caption for system reliability.,writing,0.064,easy,0.595,low,192,high

@@ -1,0 +1,101 @@
+model,provider,input_usd_per_1m,output_usd_per_1m,avg_latency_ms_seed,output_tps_seed,task_type,quality_easy,quality_medium,quality_hard,notes
+gpt-5.5,OpenAI,2.5,15.0,2500,70,writing,0.96,0.93,0.89,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,summarization,0.97,0.94,0.90,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,extraction,0.98,0.95,0.91,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,factual,0.96,0.92,0.88,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,coding,0.97,0.93,0.87,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,debugging,0.96,0.92,0.86,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,math,0.98,0.95,0.92,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,reasoning,0.97,0.93,0.90,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,system_design,0.94,0.90,0.86,Frontier default; use for hard/high-risk prompts
+gpt-5.5,OpenAI,2.5,15.0,2500,70,creative,0.95,0.91,0.87,Frontier default; use for hard/high-risk prompts
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,writing,0.92,0.86,0.78,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,summarization,0.93,0.87,0.79,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,extraction,0.94,0.89,0.81,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,factual,0.90,0.83,0.74,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,coding,0.91,0.84,0.74,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,debugging,0.90,0.82,0.71,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,math,0.93,0.86,0.76,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,reasoning,0.91,0.83,0.73,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,system_design,0.87,0.79,0.69,Cost-effective OpenAI baseline
+gpt-5.4-mini,OpenAI,0.375,2.25,1600,85,creative,0.90,0.84,0.76,Cost-effective OpenAI baseline
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,writing,0.85,0.76,0.62,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,summarization,0.87,0.78,0.64,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,extraction,0.88,0.79,0.66,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,factual,0.82,0.71,0.56,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,coding,0.81,0.69,0.52,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,debugging,0.79,0.66,0.48,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,math,0.83,0.71,0.54,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,reasoning,0.80,0.68,0.50,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,system_design,0.74,0.62,0.46,Very cheap/fast for simple extraction/rewriting/classification
+gpt-5.4-nano,OpenAI,0.1,0.625,900,110,creative,0.82,0.72,0.58,Very cheap/fast for simple extraction/rewriting/classification
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,writing,0.97,0.94,0.90,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,summarization,0.97,0.94,0.91,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,extraction,0.97,0.94,0.90,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,factual,0.95,0.91,0.86,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,coding,0.97,0.94,0.89,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,debugging,0.97,0.93,0.88,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,math,0.96,0.92,0.87,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,reasoning,0.97,0.93,0.89,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,system_design,0.95,0.91,0.87,Premium reasoning/coding/document quality
+claude-opus-4.7,Anthropic,5.0,25.0,3200,55,creative,0.97,0.94,0.90,Premium reasoning/coding/document quality
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,writing,0.94,0.90,0.84,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,summarization,0.95,0.91,0.85,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,extraction,0.95,0.91,0.85,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,factual,0.92,0.86,0.79,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,coding,0.95,0.90,0.83,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,debugging,0.94,0.89,0.82,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,math,0.93,0.87,0.80,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,reasoning,0.94,0.88,0.81,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,system_design,0.91,0.85,0.78,Strong workhorse for coding/agents
+claude-sonnet-4.6,Anthropic,3.0,15.0,2200,75,creative,0.94,0.89,0.83,Strong workhorse for coding/agents
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,writing,0.89,0.82,0.72,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,summarization,0.91,0.84,0.74,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,extraction,0.91,0.84,0.74,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,factual,0.86,0.77,0.66,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,coding,0.90,0.82,0.71,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,debugging,0.88,0.80,0.69,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,math,0.87,0.78,0.66,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,reasoning,0.88,0.79,0.67,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,system_design,0.83,0.74,0.62,Fast lower-cost Claude option
+claude-haiku-4.5,Anthropic,1.0,5.0,1000,95,creative,0.88,0.81,0.71,Fast lower-cost Claude option
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,writing,0.95,0.91,0.86,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,summarization,0.96,0.92,0.87,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,extraction,0.96,0.92,0.87,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,factual,0.95,0.91,0.86,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,coding,0.95,0.91,0.85,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,debugging,0.94,0.90,0.84,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,math,0.97,0.93,0.89,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,reasoning,0.96,0.92,0.88,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,system_design,0.93,0.89,0.85,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-pro-preview,Google,2.0,6.0,2800,65,creative,0.93,0.89,0.84,Strong reasoning/multimodal; price depends on context tier
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,writing,0.84,0.75,0.63,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,summarization,0.87,0.78,0.66,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,extraction,0.88,0.79,0.67,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,factual,0.82,0.71,0.58,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,coding,0.82,0.70,0.55,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,debugging,0.80,0.68,0.52,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,math,0.84,0.72,0.57,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,reasoning,0.81,0.69,0.54,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,system_design,0.75,0.63,0.48,High-volume inexpensive option
+gemini-3.1-flash-lite,Google,0.25,1.5,800,120,creative,0.82,0.72,0.60,High-volume inexpensive option
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,writing,0.88,0.81,0.72,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,summarization,0.89,0.82,0.73,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,extraction,0.89,0.82,0.72,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,factual,0.88,0.80,0.70,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,coding,0.94,0.89,0.81,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,debugging,0.92,0.87,0.78,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,math,0.97,0.94,0.88,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,reasoning,0.94,0.89,0.82,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,system_design,0.90,0.84,0.76,Reasoning-focused hosted option; pricing varies
+deepseek-r1,DeepSeek/hosted,0.55,2.19,1800,70,creative,0.86,0.78,0.68,Reasoning-focused hosted option; pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,writing,0.86,0.78,0.68,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,summarization,0.88,0.80,0.70,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,extraction,0.88,0.80,0.70,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,factual,0.86,0.77,0.66,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,coding,0.85,0.76,0.63,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,debugging,0.83,0.74,0.60,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,math,0.84,0.74,0.60,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,reasoning,0.85,0.75,0.62,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,system_design,0.81,0.71,0.58,Open-weight style baseline; provider pricing varies
+llama-4-maverick,Meta/hosted,0.2,0.6,1100,90,creative,0.86,0.78,0.68,Open-weight style baseline; provider pricing varies
